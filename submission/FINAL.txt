@@ -1,0 +1,17 @@
+{
+  "name": "sub06_hybrid",
+  "source": "outputs/submissions/sub06_hybrid.csv",
+  "sha256": "7c330b884d79340491717181e9dfe3c6c1a3c721aa8a750a5948858fb0a177c7",
+  "rows": 1260,
+  "header": [
+    "user_id",
+    "tv_show_id"
+  ],
+  "validation": "passed (1,260 rows, template order, 5 distinct ints, no zeros, all ids in the test pool, exact header)",
+  "method": "M3_lambdarank",
+  "val_map5": {
+    "ALL": 0.3481794871794872,
+    "SUB": 0.3880289855072464
+  },
+  "val_map5_protocol": "P1 (trained on inner, evaluated on val)"
+}

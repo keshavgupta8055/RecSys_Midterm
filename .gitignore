@@ -4,8 +4,6 @@ cache/
 # Python
 __pycache__/
 *.pyc
-# designated final file is created by the student with src/designate_final.py
-submission/
 # credentials must never be committed
 kaggle.json
 .env
