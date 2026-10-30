@@ -538,6 +538,8 @@ sub07 (fusion) is not recommended: it is not significantly better than M0 on val
 4. **Noisy LightGBM 4.7 warnings** (eval_at in params, eval_set deprecation) are filtered by message.
 5. **Run 2 launch incident**: run 2 was first started as a detached shell job; the attempt to restart it as a tracked background task left two processes running at once. The tracked one was stopped and the detached run completed. Its console log was truncated by the stopped task, but the result files are unaffected.
 
+Correction (Step 7 review): the feature count is 54, not 59; 59 is the tree count of M3.
+
 ## Step 7: final comparison, report-ready examples, repository preparation (2026-10-30)
 
 No model was trained or re-run; `run_step3..6` were not executed. Everything was assembled from existing outputs by `src/assemble_step7.py` (seconds). The only computation was `ap_at_k` on the stored example lists.
@@ -596,3 +598,15 @@ The cost CSVs were overwritten by the second (reproducibility) run of each step,
 - Fig 38 labels of the three learned hybrids overlapped; fixed with per-label offsets.
 - `int(NaN)` on the overlap rows of example_users_hybrid.csv; those rows are now filtered out.
 - The run scripts first stated a total runtime that was not computed; corrected to the measured sum (67-84 min).
+
+### Step 7 review: feature-count correction
+- `len(src.hybrid_features.FEATURES)` = 54 (groups 10 + 5 + 12 + 2 + 5 + 5 + 5 + 10). "59" had been written as the feature count; 59 is the number of trees of M3.
+- Changed 59 -> 54 where it meant the feature count:
+  - README.md (method overview);
+  - outputs/final_method_comparison.csv (M2 "54 coefficients + intercept", M3 and M4 "54 features"; "59 trees" kept);
+  - src/assemble_step7.py, which now writes `len(FEATURES)` instead of a literal.
+- LOG.md Step 6 text is left unchanged; a correction line was added at the end of the Step 6 section.
+- Untouched: "59 trees", "59-tree re-ranker" and all other uses of 59.
+- The ablation n_features (44 = 54 − 10 when dropping history strength, and every other row) is consistent with 54.
+- A syntax check accidentally imported `src.assemble_step7`, which re-ran the Step 7 assembly (no model). git shows no output changed except the intended CSV edit.
+- smoke_check: 23 headline checks and 64 hashes pass. check_submissions: all 7 files valid, hashes unchanged. None of the changed files is in a reproducibility hash list.

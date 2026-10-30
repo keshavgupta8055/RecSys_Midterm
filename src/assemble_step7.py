@@ -13,6 +13,7 @@ import pandas as pd
 
 from src import io_utils as io
 from src.evaluate import ap_at_k
+from src.hybrid_features import FEATURES
 
 OUT, FIG = io.ROOT / "outputs", io.ROOT / "outputs" / "figures"
 DPI = 150
@@ -113,18 +114,18 @@ META = {
                   f"feature builds inner {hcv('inner')} s + val {hcv('val')} s; tuning grid {float(hc.loc['M1 fusion grid (4092 configs)', 'seconds'])} s; scoring {NMS}",
                   f"test feature build {hcv('test')} s; scoring {NMS}", feat_iv, S[6]["peak_memory_mb"]),
     "M2_logreg": ("hybrid (learned)", "Step 6", "P1: trained on inner, evaluated on val",
-                  f"59 coefficients + intercept, C {S[6]['selected_hyperparameters']['M2_logreg']['C']}",
+                  f"{len(FEATURES)} coefficients + intercept, C {S[6]['selected_hyperparameters']['M2_logreg']['C']}",
                   f"features {feat_iv:.1f} s + fit {float(hc.loc['M2 final fit', 'seconds'])} s + inference {float(hc.loc['M2 inference', 'seconds'])} s; CV {float(hc.loc['M2 CV (2 x 3 fits)', 'seconds'])} s",
                   f"test features {hcv('test')} s; P3 fit and inference {NMS} (all models together: {float(hc.loc['P3 final fits (M2, M3, M4)', 'seconds'])} s / {float(hc.loc['P3 inference (all models)', 'seconds'])} s)",
                   feat_iv + float(hc.loc["M2 final fit", "seconds"]) + float(hc.loc["M2 inference", "seconds"]), S[6]["peak_memory_mb"]),
     "M3_lambdarank": ("hybrid (learned) - FINAL", "Step 6", "P1: trained on inner, evaluated on val",
-                      f"{S[6]['n_estimators']['M3_lambdarank']} trees, 31 leaves, lr 0.1, 59 features",
+                      f"{S[6]['n_estimators']['M3_lambdarank']} trees, 31 leaves, lr 0.1, {len(FEATURES)} features",
                       f"features {feat_iv:.1f} s + fit {float(hc.loc['M3_lambdarank final fit (early stopping + refit)', 'seconds'])} s + inference {float(hc.loc['M3_lambdarank inference', 'seconds'])} s; CV {float(hc.loc['M3_lambdarank CV (12 configs x 3 folds)', 'seconds'])} s",
                       f"test features {hcv('test')} s; P3 fit and inference {NMS} (all models together: {float(hc.loc['P3 final fits (M2, M3, M4)', 'seconds'])} s / {float(hc.loc['P3 inference (all models)', 'seconds'])} s)",
                       feat_iv + float(hc.loc["M3_lambdarank final fit (early stopping + refit)", "seconds"]) + float(hc.loc["M3_lambdarank inference", "seconds"]),
                       S[6]["peak_memory_mb"]),
     "M4_lgb_binary": ("hybrid (learned)", "Step 6", "P1: trained on inner, evaluated on val",
-                      f"{S[6]['n_estimators']['M4_lgb_binary']} trees, 31 leaves, lr 0.03, 59 features",
+                      f"{S[6]['n_estimators']['M4_lgb_binary']} trees, 31 leaves, lr 0.03, {len(FEATURES)} features",
                       f"features {feat_iv:.1f} s + fit {float(hc.loc['M4_lgb_binary final fit (early stopping + refit)', 'seconds'])} s + inference {float(hc.loc['M4_lgb_binary inference', 'seconds'])} s; CV {float(hc.loc['M4_lgb_binary CV (12 configs x 3 folds)', 'seconds'])} s",
                       f"test features {hcv('test')} s; P3 fit and inference {NMS}",
                       feat_iv + float(hc.loc["M4_lgb_binary final fit (early stopping + refit)", "seconds"]) + float(hc.loc["M4_lgb_binary inference", "seconds"]),

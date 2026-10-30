@@ -14,7 +14,7 @@ The data audit is in `outputs/LOG.md` (Step 1).
 - **Baselines**: popularity (`pop_recent`), personal frequency (`PF_softfrac` = sum of frac per show the user watched), and an exposure-weighted PF (`M0`: PF × (1 + airings of the show in the target window on the user's channels)^0.25; schedule counts only).
 - **Method A: Personalized PageRank** on a show-show co-view graph (`src/ppr.py`).
 - **Method B: content-based filtering** on schedule metadata: category, genres, decade, director, actors and title TF-IDF (`src/cbf.py`). Also tested with a popularity prior (`cbf_pop`).
-- **Hybrid**: candidates from six sources, 59 per-week-normalised features, LightGBM LambdaRank re-ranker trained on an earlier time window (`src/tasks.py`, `src/hybrid_features.py`, `src/run_step6.py`).
+- **Hybrid**: candidates from six sources, 54 per-week-normalised features, LightGBM LambdaRank re-ranker trained on an earlier time window (`src/tasks.py`, `src/hybrid_features.py`, `src/run_step6.py`).
 
 ## Validation protocol
 1. Train on weeks 11-20 (2020-03-09 to 2020-05-17); the target is the top-5 of weeks 21-30.
