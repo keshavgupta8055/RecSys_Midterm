@@ -1,0 +1,6 @@
+table,rows,expected,diff
+view_log,5821987,5821987,0
+schedule_11-20,1074235,1074235,0
+schedule_21-30,1074394,1074394,0
+schedule_31-42,1295378,1295378,0
+submission,1260,1260,0

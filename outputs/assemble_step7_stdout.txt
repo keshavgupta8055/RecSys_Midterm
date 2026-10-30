@@ -1,0 +1,29 @@
+[check] 18 cross-file MAP@5 comparisons agree to 1e-12
+        method                         role  map5_ALL  ci_lo_ALL  ci_hi_ALL  map5_SUB             diff_vs_PF_ALL                                      diff_vs_M0_ALL  total_seconds_val_for_fig38
+    pop_recent                     baseline    0.2398     0.2328     0.2466    0.2656 -0.0839 [-0.0900, -0.0770] not computed in Steps 3-6 (per-user APs not stored)                         0.51
+   PF_softfrac                     baseline    0.3237     0.3168     0.3311    0.3600                  reference                          -0.0170 [-0.0191, -0.0148]                         7.71
+           PPR                     Method A    0.3256     0.3188     0.3331    0.3640 +0.0020 [+0.0006, +0.0032] not computed in Steps 3-6 (per-user APs not stored)                        38.96
+      cbf_pure                     Method B    0.1815     0.1761     0.1873    0.1992 -0.1421 [-0.1473, -0.1364] not computed in Steps 3-6 (per-user APs not stored)                        10.19
+       cbf_pop Method B (+popularity prior)    0.2783     0.2717     0.2849    0.3111 -0.0453 [-0.0499, -0.0408] not computed in Steps 3-6 (per-user APs not stored)                        12.94
+M0_PF_exposure       baseline (PF-exposure)    0.3406     0.3336     0.3482    0.3803 +0.0170 [+0.0148, +0.0191]                                           reference                        17.20
+     M1_fusion           non-learned hybrid    0.3416     0.3346     0.3490    0.3803 +0.0180 [+0.0155, +0.0204]                          +0.0010 [-0.0007, +0.0026]                       107.60
+     M2_logreg             hybrid (learned)    0.3421     0.3349     0.3497    0.3780 +0.0185 [+0.0150, +0.0218]                          +0.0015 [-0.0014, +0.0046]                       118.00
+ M3_lambdarank     hybrid (learned) - FINAL    0.3482     0.3412     0.3556    0.3880 +0.0245 [+0.0213, +0.0274]                          +0.0075 [+0.0050, +0.0099]                       117.64
+ M4_lgb_binary             hybrid (learned)    0.3479     0.3406     0.3552    0.3881 +0.0243 [+0.0212, +0.0272]                          +0.0073 [+0.0045, +0.0100]                       144.78
+ role             user_id          method  hits    ap5  recommended_in_training_history
+light  385172162373391221      pop_recent     3 0.6000                                5
+light  385172162373391221     PF_softfrac     3 0.3533                                5
+light  385172162373391221             PPR     3 0.4533                                5
+light  385172162373391221        cbf_pure     0 0.0000                                3
+light  385172162373391221         cbf_pop     3 0.5200                                5
+light  385172162373391221     M0 exposure     3 0.5200                                5
+light  385172162373391221 final hybrid M3     3 0.5500                                5
+heavy 5672174985970291620      pop_recent     3 0.4833                                5
+heavy 5672174985970291620     PF_softfrac     3 0.5500                                5
+heavy 5672174985970291620             PPR     3 0.5500                                5
+heavy 5672174985970291620        cbf_pure     1 0.0400                                4
+heavy 5672174985970291620         cbf_pop     3 0.6000                                5
+heavy 5672174985970291620     M0 exposure     3 0.6000                                5
+heavy 5672174985970291620 final hybrid M3     3 0.6000                                5
+[D] 40 figures indexed; contact sheet written
+[done] files written; issues: none

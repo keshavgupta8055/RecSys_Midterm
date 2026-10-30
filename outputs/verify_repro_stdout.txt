@@ -1,0 +1,3 @@
+{'run': 1, 'wall_seconds_incl_csv_parse': 57.6, 'rows': 3014110, 'sha256': '98a7a80a30fa20e74d0f8043757830983293f7d18cb8cb38c19224dac8be72bd'}
+{'run': 2, 'wall_seconds_incl_csv_parse': 69.0, 'rows': 3014110, 'sha256': '98a7a80a30fa20e74d0f8043757830983293f7d18cb8cb38c19224dac8be72bd'}
+assert_frame_equal: identical

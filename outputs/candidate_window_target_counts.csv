@@ -1,0 +1,7 @@
+window,start,end_exclusive,group,users,ge1_shows,ge3_shows,ge5_shows
+W1 weeks 21-30,2020-05-18,2020-07-27,all_users,4914,4643,4333,4030
+W1 weeks 21-30,2020-05-18,2020-07-27,submission_users,1260,1238,1206,1150
+W2 weeks 25-30,2020-06-15,2020-07-27,all_users,4914,4569,4193,3757
+W2 weeks 25-30,2020-06-15,2020-07-27,submission_users,1260,1233,1188,1103
+W3 weeks 11-20,2020-03-09,2020-05-18,all_users,4914,4737,4553,4349
+W3 weeks 11-20,2020-03-09,2020-05-18,submission_users,1260,1242,1222,1197

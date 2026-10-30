@@ -1,0 +1,4 @@
+schedule,rows,labelled_rows,labelled_share,distinct_tv_show_id,distinct_channels,distinct_channels_with_labelled,null_tv_show_id,negative_tv_show_id,nonpositive_duration,exact_duplicate_rows
+11-20,1074235,115613,0.1076,5847,400,177,0,0,1,0
+21-30,1074394,121505,0.1131,6363,403,188,0,0,0,0
+31-42,1295378,144774,0.1118,6636,404,191,0,0,0,0

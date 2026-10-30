@@ -1,0 +1,52 @@
+{
+  "val_split": {
+    "pool_size": 6376,
+    "pool_size_literal_schedule_21_30_only_from_W21": 6363,
+    "train_rows": 1824077,
+    "users": 4030,
+    "sub_users": 1150
+  },
+  "chosen_pop": "pop_recent",
+  "chosen_pf": "PF_softfrac",
+  "example_light": {
+    "user_id": "385172162373391221",
+    "train_shows": 17,
+    "truth_in_hist_any": 4,
+    "truth_in_hist_q": 3
+  },
+  "example_heavy": {
+    "user_id": "5672174985970291620",
+    "train_shows": 55,
+    "truth_in_hist_any": 4,
+    "truth_in_hist_q": 4
+  },
+  "test_split": {
+    "pool_size": 6642,
+    "pool_size_literal_schedule_31_42_only": 6636,
+    "train_rows": 3014110,
+    "users": 1260,
+    "sub_users": 1260
+  },
+  "test_pf": {
+    "users_with_any_padding": 3,
+    "users_fully_padded": 2,
+    "mean_padded": 0.00873015873015873,
+    "users_without_qualifying_training_show": 4
+  },
+  "runtime_seconds": 106.1,
+  "peak_memory_mb": 1314,
+  "sha256": {
+    "baseline_results_val.csv": "6015f3a106883b14815a072abdc8a779ef457091fa2084ab0e5ee503475f24bc",
+    "baseline_paired_diffs_val.csv": "f6ba323e2e1ccf28da7735d7524ca242166de08e150d06d8dc81055b8dbe8ff1",
+    "ceiling_analysis_val.csv": "dcd0a47ce1dda3770bb53287b8a608b590a70291134260e5642d6a3f5e79939f",
+    "robustness_target_windows_val.csv": "70dbb812a1e1f666ba49079fdf8e59d2248ba2a8f5d60e4a35aa751188116bf7",
+    "breakdown_activity_bucket_val.csv": "1e64973a3bd3c9bba35cab1298822816a2b3e254f1dce04172abb27f9aac09f8",
+    "hit_rank_distribution_val.csv": "49ce78b37065335b82496d6e405bb492d6980793dec7d3f1bbabf40206f50b01",
+    "per_user_ap_distribution_val.csv": "d79f8a424a7b8c828d6770154637de14d8795164d9a09d574604cd668bf9a4e1",
+    "verify_map_hand.txt": "4a1647a36de7c956eb200babc1275eeebf013b95692368d52592f78b6735740e",
+    "example_users.json": "7c5dc096ca4fc6945529d63dd8b96345e02f1b2f3492d74fac99d8de3a0aca35",
+    "example_users_profiles.csv": "6a15671a241963e7c065357de90fb4f3267b24c6b106fd13f4299c9da00f88d7",
+    "submissions/sub01_popularity.csv": "9b031ed6ddd7eaab87b16487d04f38b063c6ae6919bcc6a8a2ef0decd910edf8",
+    "submissions/sub02_personal_baseline.csv": "9b1338b61acc260a5a95c2a37d64a5d8aca8ecf5a7e79f29a9c6b5d3ce53ab66"
+  }
+}

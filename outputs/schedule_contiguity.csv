@@ -1,0 +1,4 @@
+schedule,consecutive_pairs,overlapping_pairs(gap<0),exact_contiguous(gap==0),gaps(gap>0),duplicate_channel_start
+11-20,1073835,2,1073437,396,1
+21-30,1073991,2,1073986,3,0
+31-42,1294974,8,1294962,4,0

@@ -1,0 +1,41 @@
+Toy content-based filtering: blocks category + genres + director, block weights 1
+  show A (id 1): category=Kids, genres=['cartoon', 'comedy'], director=X
+  show B (id 2): category=Kids, genres=['cartoon'], director=Y
+  show C (id 3): category=Films, genres=['comedy', 'drama'], director=X
+  show D (id 4): category=Films, genres=['drama'], director=None
+  user history (softfrac weights): A=2, B=1
+
+feature order: category ['Films', 'Kids']; genres ['cartoon', 'comedy', 'drama']; director ['X', 'Y']
+director idf = ln((1+N)/(1+df)) + 1 with N = 4: X: ln(5/3) + 1, Y: ln(5/2) + 1
+
+show A: category block [0, 1]
+         genres raw [1, 7/10, 0] -> / sqrt(149/100) = [10*sqrt(149)/149, 7*sqrt(149)/149, 0]
+         director block [1, 0]   (one token -> unit after L2, idf cancels)
+         concatenated, divided by sqrt(number of non-empty blocks) -> x_A = [0, sqrt(3)/3, 10*sqrt(447)/447, 7*sqrt(447)/447, 0, sqrt(3)/3, 0]
+
+show B: category block [0, 1]
+         genres raw [1, 0, 0] -> / sqrt(1) = [1, 0, 0]
+         director block [0, 1]   (one token -> unit after L2, idf cancels)
+         concatenated, divided by sqrt(number of non-empty blocks) -> x_B = [0, sqrt(3)/3, sqrt(3)/3, 0, 0, 0, sqrt(3)/3]
+
+show C: category block [1, 0]
+         genres raw [0, 1, 7/10] -> / sqrt(149/100) = [0, 10*sqrt(149)/149, 7*sqrt(149)/149]
+         director block [1, 0]   (one token -> unit after L2, idf cancels)
+         concatenated, divided by sqrt(number of non-empty blocks) -> x_C = [sqrt(3)/3, 0, 0, 10*sqrt(447)/447, 7*sqrt(447)/447, sqrt(3)/3, 0]
+
+show D: category block [1, 0]
+         genres raw [0, 0, 1] -> / sqrt(1) = [0, 0, 1]
+         director block [0, 0]   (missing -> zero block)
+         concatenated, divided by sqrt(number of non-empty blocks) -> x_D = [sqrt(2)/2, 0, 0, 0, sqrt(2)/2, 0, 0]
+
+profile raw = 2*x_A + 1*x_B = [0, sqrt(3), sqrt(3)/3 + 20*sqrt(447)/447, 14*sqrt(447)/447, 0, 2*sqrt(3)/3, sqrt(3)/3]
+profile (L2-normalised) = [0, 3*sqrt(149)/sqrt(40*sqrt(149) + 2831), (sqrt(149) + 20)/sqrt(40*sqrt(149) + 2831), 14/sqrt(40*sqrt(149) + 2831), 0, 2*sqrt(149)/sqrt(40*sqrt(149) + 2831), sqrt(149)/sqrt(40*sqrt(149) + 2831)]
+
+cosine(profile, x_s) = profile . x_s (both unit length):
+  A: (3*sqrt(149)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) + ((sqrt(149) + 20)/sqrt(40*sqrt(149) + 2831))*(10*sqrt(447)/447) + (14/sqrt(40*sqrt(149) + 2831))*(7*sqrt(447)/447) + (2*sqrt(149)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) = sqrt(447)*(10*sqrt(149) + 1043)/(447*sqrt(40*sqrt(149) + 2831)) = 0.956479837892768
+  B: (3*sqrt(149)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) + ((sqrt(149) + 20)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) + (sqrt(149)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) = 5*(4*sqrt(3) + sqrt(447))/(3*sqrt(40*sqrt(149) + 2831)) = 0.812043546357891
+  C: (14/sqrt(40*sqrt(149) + 2831))*(10*sqrt(447)/447) + (2*sqrt(149)/sqrt(40*sqrt(149) + 2831))*(sqrt(3)/3) = 146*sqrt(447)/(149*sqrt(40*sqrt(149) + 2831)) = 0.359583344287329
+  D: 0 = 0 = 0.000000000000000
+
+src.cbf cosines: A=0.956479837892768, B=0.812043546357891, C=0.359583344287329, D=0.000000000000000
+max |src.cbf - exact| = 1.110e-16 -> OK (< 1e-12)

@@ -1,0 +1,27 @@
+Hand-worked features: val task, user 8152220956056607861, show 400357 ('Холостяк', 10 сезон, 10 эп., 1 ч.); history 2020-03-09 .. 2020-05-18 (exclusive, 10 weeks), target 2020-05-18 .. 2020-07-27 (10 weeks)
+raw interaction rows (airing_start, channel, airing_duration, watched_seconds, frac, iso_week):
+  2020-03-13 18:00:00  ch 6  dur 3600  watched 3598  frac 0.999444  week 11  (qualifying)
+  2020-03-13 19:00:00  ch 6  dur 10800  watched 1297  frac 0.120093  week 11
+  2020-03-20 15:30:00  ch 6  dur 7200  watched 4581  frac 0.636250  week 12
+  2020-03-27 19:00:00  ch 6  dur 10800  watched 2712  frac 0.251111  week 13
+  2020-04-03 15:25:00  ch 6  dur 7500  watched 6911  frac 0.921467  week 14  (qualifying)
+  2020-04-03 18:00:00  ch 6  dur 3600  watched 3333  frac 0.925833  week 14  (qualifying)
+  2020-04-03 19:00:00  ch 6  dur 10800  watched 3644  frac 0.337407  week 14
+  2020-04-10 15:25:00  ch 6  dur 7500  watched 4654  frac 0.620533  week 15
+  2020-04-17 15:35:00  ch 6  dur 6900  watched 758  frac 0.109855  week 16
+  2020-04-17 22:45:00  ch 6  dur 1200  watched 1200  frac 1.000000  week 16  (qualifying)
+  2020-04-24 19:00:00  ch 6  dur 10800  watched 1267  frac 0.117315  week 17
+  2020-05-01 15:25:00  ch 6  dur 7500  watched 6057  frac 0.807600  week 18  (qualifying)
+  2020-05-01 18:00:00  ch 6  dur 3600  watched 3600  frac 1.000000  week 18  (qualifying)
+  2020-05-01 19:00:00  ch 6  dur 10800  watched 5527  frac 0.511759  week 18
+  2020-05-08 15:40:00  ch 6  dur 6600  watched 5784  frac 0.876364  week 19  (qualifying)
+  2020-05-15 14:50:00  ch 6  dur 9600  watched 5317  frac 0.553854  week 20
+  2020-05-15 19:00:00  ch 6  dur 10800  watched 6046  frac 0.559815  week 20
+softfrac = 0.999444 + 0.120093 + 0.636250 + 0.251111 + 0.921467 + 0.925833 + 0.337407 + 0.620533 + 0.109855 + 1.000000 + 0.117315 + 0.807600 + 1.000000 + 0.511759 + 0.876364 + 0.553854 + 0.559815 = 10.348701
+qualifying count = #rows with frac >= 0.8 = 7
+weeks_active (distinct ISO weeks with a qualifying watch) = [11, 14, 16, 18, 19] -> 5; share = 5 / 10 = 0.500000
+user's channels for this show C_us = [6]
+A_train_us = labelled airings of the show starting in the history window on C_us = 33 (all channels: 33)
+A_target_us = labelled airings in the target window on C_us = 8 (all channels: 8); schedule only
+exposure ratio = A_target_us / max(A_train_us, 1) = 8 / 33 = 0.242424; rate ratio = (8/10) / max(33/10, 1/10) = 0.242424
+vectorised: raw_softfrac=10.348701, raw_q=7.000000, raw_weeks_q=5.000000, raw_a_train=33.000000, raw_a_target=8.000000, raw_ex_ratio_us=0.242424

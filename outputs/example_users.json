@@ -1,0 +1,11 @@
+{
+  "light": {
+    "user_id": "385172162373391221",
+    "distinct_qualifying_training_shows": 17
+  },
+  "heavy": {
+    "user_id": "5672174985970291620",
+    "distinct_qualifying_training_shows": 55
+  },
+  "rule": "eligible = SUB val users with >= 5 truth shows and >= 5 distinct qualifying training shows (n=1112); light = closest to p25 = 17.0; heavy = closest to p90 = 55.0; ties smallest id"
+}

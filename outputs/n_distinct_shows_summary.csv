@@ -1,0 +1,3 @@
+group,users,users_0_shows,users_ge1,users_ge5,median_shows,p90_shows,max_shows
+all_users,4914,73,4841,4633,32.0,105.0,545
+submission_users,1260,4,1256,1241,40.0,116.10000000000014,329

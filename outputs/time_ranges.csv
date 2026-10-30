@@ -1,0 +1,5 @@
+table,min_start,max_start,iso_week_min,iso_week_max,timestamp_raw_format,max_airing_end
+view_log,2020-03-09 00:00:02,2020-07-26 23:58:42,11,30,"YYYY-MM-DD HH:MM:SS (naive, no tz)",
+schedule_11-20,2020-03-08 23:00:00,2020-05-18 11:45:00,10,21,"DD.MM.YYYY HH:MM:SS (naive, no tz)",2020-05-18 12:00:00
+schedule_21-30,2020-05-18 00:00:00,2020-07-27 11:55:00,21,31,"DD.MM.YYYY HH:MM:SS (naive, no tz)",2020-07-27 12:00:00
+schedule_31-42,2020-07-27 00:00:00,2020-10-19 11:55:00,31,43,"DD.MM.YYYY HH:MM:SS (naive, no tz)",2020-10-19 12:00:00

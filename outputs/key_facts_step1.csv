@@ -1,0 +1,55 @@
+fact,value,expected
+rows view_log,"5,821,987","5,821,987"
+rows schedule_11-20,"1,074,235","1,074,235"
+rows schedule_21-30,"1,074,394","1,074,394"
+rows schedule_31-42,"1,295,378","1,295,378"
+rows submission,"1,260","1,260"
+view log null cells (all cols),0,
+view log distinct users,"4,914",
+view log distinct vsetv_id,202,
+view log min start_time,2020-03-09 00:00:02,
+view log max start_time,2020-07-26 23:58:42,
+view log max end_time,2020-07-26 23:59:58,
+view log exact duplicate rows,17,
+view log ISO week range (start_time),11-30,
+view duration median (s),396.0,~396
+view duration max (s),342145,"~342,145"
+view duration min (s),61,
+view duration == 0 rows,0,
+rows where duration != end_time - start_time,117,
+rows with end_time < start_time,0,
+views longer than 24h (duration>86400),52,
+view rows with start_time inside schedule_11-20 span,"3,952,055",
+view rows with start_time inside schedule_21-30 span,"1,876,814",
+view rows with start_time inside schedule_31-42 span,0,
+view start_time with seconds != 0 (share),0.9833,
+schedule_11-20 start_time with seconds != 0 (share),0.0,
+schedule_21-30 start_time with seconds != 0 (share),0.0,
+schedule_31-42 start_time with seconds != 0 (share),0.0,
+view channels absent from every schedule,5,
+schedule_11-20 labelled share,0.1076,~0.108
+schedule_21-30 labelled share,0.1131,
+schedule_31-42 labelled share,0.1118,
+tv_show_ids with >1 category,0,
+tv_show_ids with >1 genre_1,80,
+tv_show_ids with >1 distinct title (share),0.4499,
+labelled tv_show_ids in 31-42 schedule,6636,
+... of which also aired (labelled) in 11-30 schedules,5199,
+tv_show_ids also in 11-20 & 21-30,3976,
+tv_show_ids (all 3 schedules) with exactly 1 airing (share),0.1359,
+median airings per tv_show_id (all 3 schedules),6.0,
+median distinct titles per tv_show_id,1.0,
+labelled airing duration median (s),2700.0,
+submission columns,"user_id,tv_show_id","user_id,tv_show_id"
+submission duplicate user_ids,0,
+submission tv_show_id distinct values,0 0 0 0 0,
+submission users present in view log (weeks 11-30),1260,
+submission users with 0 view rows in weeks 11-30,0,
+view-log users not in submission,3654,
+view rows/user min,1,
+view rows/user median,874.0,
+view rows/user p90,2429.7,
+view rows/user max,38114,
+5 lowest days (view rows),2020-07-02=5108; 2020-07-04=7814; 2020-06-30=15258; 2020-06-29=15543; 2020-06-23=15750,
+days with view rows,139,
+active users per ISO week (min..max),2406..4721,

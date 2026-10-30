@@ -1,0 +1,16 @@
+method,population,cold_truth_pairs,cold_pairs_never_watched_in_training,cold_pairs_absent_from_11_20_schedule,recall_of_cold_pairs
+pop_recent,ALL,2129,2129.0,1497.0,0.0
+pop_recent,SUB,530,530.0,360.0,0.0
+PF_softfrac,ALL,2129,2129.0,1497.0,0.0
+PF_softfrac,SUB,530,530.0,360.0,0.0
+PPR,ALL,2129,2129.0,1497.0,0.0
+PPR,SUB,530,530.0,360.0,0.0
+cbf_pure,ALL,2129,2129.0,1497.0,0.0014091122592766556
+cbf_pure,SUB,530,530.0,360.0,0.0018867924528301887
+cbf_pop,ALL,2129,2129.0,1497.0,0.0009394081728511038
+cbf_pop,SUB,530,530.0,360.0,0.0018867924528301887
+PF_exposure,ALL,2129,2129.0,1497.0,0.0
+PF_exposure,SUB,530,530.0,360.0,0.0
+cbf_pure_new_only,ALL,2129,,,0.0014091122592766556
+cbf_pop_new_only,ALL,2129,,,0.0009394081728511038
+PPR_new_only,ALL,2129,,,0.0

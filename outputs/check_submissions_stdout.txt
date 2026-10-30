@@ -1,0 +1,60 @@
+sub01_popularity.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub02_personal_baseline.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub03_ppr.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub04_cbf.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub05_pf_exposure.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub06_hybrid.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+sub07_fusion.csv:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+                       file  rows                                                           sha256  users_identical_to_sub05  users_identical_to_sub06
+       sub01_popularity.csv  1260 9b031ed6ddd7eaab87b16487d04f38b063c6ae6919bcc6a8a2ef0decd910edf8                         4                         5
+sub02_personal_baseline.csv  1260 9b1338b61acc260a5a95c2a37d64a5d8aca8ecf5a7e79f29a9c6b5d3ce53ab66                       156                        67
+              sub03_ppr.csv  1260 a946d2eb1037e4fc640b0a31ab7315491de633a82a6b6c93b54931cac70c7ae7                       168                        80
+              sub04_cbf.csv  1260 4324066065e190590ccda13390e7552a3bb3be2fbc47fd54f93cf595751965d7                         6                         4
+      sub05_pf_exposure.csv  1260 0e0808bbdf68bb3985556bda6075cff5e31d979546e53e064cf127c0dfbd4337                      1260                       116
+           sub06_hybrid.csv  1260 7c330b884d79340491717181e9dfe3c6c1a3c721aa8a750a5948858fb0a177c7                       116                      1260
+           sub07_fusion.csv  1260 a8c31a09460f15a87863e2439e1c97440f30643f129ab3b803d324659762a4ba                       378                       152
+
+mean number of common ids per user (out of 5):
+                         sub01_popularity  sub02_personal_baseline  sub03_ppr  sub04_cbf  sub05_pf_exposure  sub06_hybrid  sub07_fusion
+sub01_popularity                     5.00                     2.30       2.47       3.09               2.52          2.88          2.83
+sub02_personal_baseline              2.30                     5.00       4.68       2.66               4.31          3.68          4.08
+sub03_ppr                            2.47                     4.68       5.00       2.75               4.28          3.72          4.10
+sub04_cbf                            3.09                     2.66       2.75       5.00               2.82          3.06          3.21
+sub05_pf_exposure                    2.52                     4.31       4.28       2.82               5.00          4.06          4.48
+sub06_hybrid                         2.88                     3.68       3.72       3.06               4.06          5.00          4.14
+sub07_fusion                         2.83                     4.08       4.10       3.21               4.48          4.14          5.00

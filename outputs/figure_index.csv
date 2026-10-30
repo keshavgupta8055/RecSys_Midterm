@@ -1,0 +1,41 @@
+number,file,shows,serves
+1,outputs/figures/01_view_duration_hist_logx.png,View duration histogram (log x),validation
+2,outputs/figures/02_views_per_user_loglog.png,View-log rows per user (log-log),validation
+3,outputs/figures/03_views_per_day.png,View-log rows per day; dip around 2020-07-03,limitations
+4,outputs/figures/04_schedule_labelled_share.png,Labelled vs unlabelled schedule rows per file,limitations
+5,outputs/figures/05_top20_categories_labelled.png,Categories among labelled schedule rows,business-algorithmic analysis
+6,outputs/figures/06_airing_duration_labelled_hist.png,Airing duration of labelled rows,validation
+7,outputs/figures/07_airings_per_tv_show_id.png,Airings per tv_show_id (series level),validation
+8,outputs/figures/08_frac_hist.png,"Screen-time fraction of labelled pairs, threshold 0.8",validation
+9,outputs/figures/09_threshold_sensitivity.png,Threshold sensitivity: pairs and users with >= 5 shows,validation
+10,outputs/figures/10_weekly_qualifying.png,Weekly activity; weeks 25-27 dip,limitations
+11,outputs/figures/11_n_distinct_shows.png,Distinct qualifying shows per user,validation
+12,outputs/figures/12_category_share.png,Category share: what airs vs what is watched,business-algorithmic analysis
+13,outputs/figures/13_watchtime_accounting.png,Where merged watch time falls (labelled / unlabelled / gaps),limitations
+14,outputs/figures/14_baselines_map5.png,Baseline variants MAP@5 with CI,method comparison
+15,outputs/figures/15_per_user_ap_hist.png,"Per-user AP histogram, PF vs popularity",validation
+16,outputs/figures/16_map5_by_activity.png,Baseline MAP@5 by training activity,business-algorithmic analysis
+17,outputs/figures/17_hit_rank.png,"Hit rate by rank, baselines",validation
+18,outputs/figures/18_ceiling.png,History-only ceiling analysis,limitations
+19,outputs/figures/19_robustness_windows.png,Baseline robustness across target windows,validation
+20,outputs/figures/20_ppr_grid_heatmap.png,PPR grid heatmap (d x edge weight),method comparison
+21,outputs/figures/21_map5_three_methods.png,pop / PF / PPR MAP@5 with CI,method comparison
+22,outputs/figures/22_familiar_vs_new.png,Familiar vs new composition and precision (PPR),business-algorithmic analysis
+23,outputs/figures/23_map5_by_activity_three_methods.png,MAP@5 by activity: pop / PF / PPR,business-algorithmic analysis
+24,outputs/figures/24_new_only_discovery.png,Discovery of unseen shows: PPR vs popularity,business-algorithmic analysis
+25,outputs/figures/25_ppr_degree_distribution.png,"PPR graph degree distribution (val, test)",limitations
+26,outputs/figures/26_cbf_grid.png,CBF grid by feature set,method comparison
+27,outputs/figures/27_map5_all_methods.png,MAP@5 of all Step 5 methods with CI,method comparison
+28,outputs/figures/28_familiar_vs_new_all_methods.png,Familiar vs new for all Step 5 methods,business-algorithmic analysis
+29,outputs/figures/29_new_only_discovery_all.png,"New-only discovery: CBF, PPR, popularity",business-algorithmic analysis
+30,outputs/figures/30_exposure_diagnostics.png,Exposure diagnostics: hit rate vs A_target_us,business-algorithmic analysis
+31,outputs/figures/31_category_mix_all_methods.png,Category mix of recommendations vs truth,business-algorithmic analysis
+32,outputs/figures/32_hybrid_map5_all_methods.png,MAP@5 of every method incl. hybrids (P1) with ceiling,method comparison
+33,outputs/figures/33_hybrid_ablation.png,Hybrid ablation by feature group,method comparison
+34,outputs/figures/34_hybrid_importance.png,Re-ranker SHAP and gain importance (top-15),business-algorithmic analysis
+35,outputs/figures/35_hybrid_candidates.png,Candidate recall by source; candidate-size sensitivity,validation
+36,outputs/figures/36_hybrid_activity_buckets.png,MAP@5 by activity: final hybrid vs others,business-algorithmic analysis
+37,outputs/figures/37_hybrid_failure_analysis.png,Failure analysis: AP change vs M0,limitations
+38,outputs/figures/38_accuracy_vs_cost.png,"Accuracy vs measured cost, all methods",method comparison
+39,outputs/figures/39_example_user_light.png,Example user (light): top-5 per method,business-algorithmic analysis
+40,outputs/figures/40_example_user_heavy.png,Example user (heavy): top-5 per method,business-algorithmic analysis

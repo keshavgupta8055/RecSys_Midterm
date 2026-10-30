@@ -1,0 +1,21 @@
+{
+  "view_rows_raw": 5821987,
+  "view_exact_duplicates_dropped": 17,
+  "view_rows_dedup": 5821970,
+  "merged_rows": 5441780,
+  "watched_seconds_before_merge": 8619206214,
+  "watched_seconds_after_merge": 8502989921,
+  "blocks_from_2plus_raw_views": 187000,
+  "airings_raw_11_30": 2148629,
+  "airings_dropped_nonpos_duration": 1,
+  "airings_dropped_dup_channel_start": 0,
+  "airings_kept": 2148628,
+  "airings_labelled": 237118,
+  "frac_max": 1.0,
+  "frac_gt_1_pairs": 0,
+  "build_seconds": 59.0,
+  "labelled_pairs_all": 3014110,
+  "labelled_pairs_dropped_airing_in_week31": 0,
+  "labelled_pairs_saved": 3014110,
+  "peak_memory_mb": 1471
+}

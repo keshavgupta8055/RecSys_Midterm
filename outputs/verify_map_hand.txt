@@ -1,0 +1,16 @@
+Hand-computed AP@5 check, personal baseline PF_softfrac (validation split)
+user_id = 57357915868236403 (SUB user)
+recommended (rank: id title [category] -> hit?):
+  1: 240081 Факты. [Инфо] -> HIT
+  2: 2400480 ТСН. [Инфо] -> HIT
+  3: 200344 'Чистоnews'. [Развлечения] -> miss
+  4: 6200371 ДжеДАИ. [Познавательное] -> HIT
+  5: 6700482 Секретные материалы. [Другое] -> miss
+truth (5 ids, order irrelevant): 240081 Факты., 2400480 ТСН., 90080895 Х/ф 'Один в поле воин', 1 и 2 с., 6200371 ДжеДАИ., 90075647 Х/ф 'Мой путь'.
+  rank 1: hit #1 -> P@1 = 1/1 = 1.000000
+  rank 2: hit #2 -> P@2 = 2/2 = 1.000000
+  rank 3: miss -> contributes 0
+  rank 4: hit #3 -> P@4 = 3/4 = 0.750000
+  rank 5: miss -> contributes 0
+  AP@5 = (1/1 + 2/2 + 3/4) / min(5, |truth|=5) = 2.750000 / 5 = 0.550000
+  ap_at_k(...) = 0.550000 -> MATCH

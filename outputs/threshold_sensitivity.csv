@@ -1,0 +1,13 @@
+group,thr,qualifying_pairs,distinct_users,distinct_tv_show_ids,users_with_ge5_shows
+all_users,0.5,938121,4871,4071,4766
+all_users,0.6,815487,4865,4019,4722
+all_users,0.7,708960,4854,3950,4684
+all_users,0.8,611748,4841,3866,4633
+all_users,0.9,521355,4828,3772,4534
+all_users,1.0,421600,4769,3540,4281
+submission_users,0.5,307475,1256,3880,1250
+submission_users,0.6,265468,1256,3775,1248
+submission_users,0.7,229461,1256,3656,1244
+submission_users,0.8,196134,1256,3539,1241
+submission_users,0.9,165539,1255,3354,1225
+submission_users,1.0,131584,1247,2952,1197

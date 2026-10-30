@@ -1,0 +1,5 @@
+split,variant,items,features,nnz,item_build_seconds,profile_scoring_ranking_seconds,users,peak_memory_mb_whole_step
+val,cbf_pure,8234,23841,82089,1.02,9.17,4030,1053
+val,cbf_pop,8234,23841,82089,1.76,11.18,4030,1053
+test,cbf_pure,9671,26758,96300,2.91,5.67,1260,1053
+test,cbf_pop,9671,26758,96300,1.97,6.96,1260,1053

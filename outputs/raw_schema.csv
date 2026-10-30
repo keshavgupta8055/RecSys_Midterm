@@ -1,0 +1,47 @@
+file,column,inferred_dtype_first1000,example
+dataset11-30.csv,user_id,uint64,3398461054087191302
+dataset11-30.csv,vsetv_id,int64,6
+dataset11-30.csv,start_time,object,2020-03-09 00:00:02
+dataset11-30.csv,stop_time,object,2020-03-09 00:01:53
+dataset11-30.csv,duraton,int64,111
+export_arh_11-20-final.csv,channel_id,int64,3
+export_arh_11-20-final.csv,channel_title,object,1+1
+export_arh_11-20-final.csv,start_time,object,09.03.2020 06:00:00
+export_arh_11-20-final.csv,duration,int64,6000
+export_arh_11-20-final.csv,tv_show_title,object,"'Жизнь известных людей', 2 сезон."
+export_arh_11-20-final.csv,tv_show_id,int64,0
+export_arh_11-20-final.csv,tv_show_category,object,Другое
+export_arh_11-20-final.csv,tv_show_genre_1,object,
+export_arh_11-20-final.csv,tv_show_genre_2,object,
+export_arh_11-20-final.csv,tv_show_genre_3,object,
+export_arh_11-20-final.csv,year_of_production,object,
+export_arh_11-20-final.csv,director,object,
+export_arh_11-20-final.csv,actors,object,
+export_arh_21-30-final.csv,channel_id,int64,3
+export_arh_21-30-final.csv,channel_title,object,1+1
+export_arh_21-30-final.csv,start_time,object,18.05.2020 06:30:00
+export_arh_21-30-final.csv,duration,int64,1800
+export_arh_21-30-final.csv,tv_show_title,object,'Завтрак с 1+1'. Информационно-развлекательная программа.
+export_arh_21-30-final.csv,tv_show_id,int64,20088
+export_arh_21-30-final.csv,tv_show_category,object,Развлечения
+export_arh_21-30-final.csv,tv_show_genre_1,object,информация (комплексная)
+export_arh_21-30-final.csv,tv_show_genre_2,object,
+export_arh_21-30-final.csv,tv_show_genre_3,object,
+export_arh_21-30-final.csv,year_of_production,object,1996-
+export_arh_21-30-final.csv,director,object,
+export_arh_21-30-final.csv,actors,object,
+export_arh_31-42-final.csv,channel_id,int64,3
+export_arh_31-42-final.csv,channel_title,object,1+1
+export_arh_31-42-final.csv,start_time,object,27.07.2020 06:30:00
+export_arh_31-42-final.csv,duration,int64,1800
+export_arh_31-42-final.csv,tv_show_title,object,'Завтрак с 1+1'. Информационно-развлекательная программа.
+export_arh_31-42-final.csv,tv_show_id,int64,20088
+export_arh_31-42-final.csv,tv_show_category,object,Развлечения
+export_arh_31-42-final.csv,tv_show_genre_1,object,информация (комплексная)
+export_arh_31-42-final.csv,tv_show_genre_2,object,
+export_arh_31-42-final.csv,tv_show_genre_3,object,
+export_arh_31-42-final.csv,year_of_production,object,1996-
+export_arh_31-42-final.csv,director,object,
+export_arh_31-42-final.csv,actors,object,
+submission.csv,user_id,uint64,8377619604347126107
+submission.csv,tv_show_id,object,0 0 0 0 0

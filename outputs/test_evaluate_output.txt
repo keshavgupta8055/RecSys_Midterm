@@ -1,0 +1,11 @@
+PASS  perfect list                             rec=['a', 'b', 'c', 'd', 'e']  expected=1.000000  computed=1.000000
+PASS  same ids, other order                    rec=['e', 'c', 'a', 'd', 'b']  expected=1.000000  computed=1.000000
+PASS  one hit at rank 1 only                   rec=['a', 'x', 'y', 'z', 'w']  expected=0.200000  computed=0.200000
+PASS  one hit at rank 5 only                   rec=['x', 'y', 'z', 'w', 'a']  expected=0.040000  computed=0.040000
+PASS  hits at ranks 1 and 3                    rec=['a', 'x', 'b', 'y', 'z']  expected=0.333333  computed=0.333333
+PASS  no hit                                   rec=['v', 'w', 'x', 'y', 'z']  expected=0.000000  computed=0.000000
+PASS  duplicate ids count once                 rec=['a', 'a', 'b', 'c', 'd']  expected=0.643333  computed=0.643333
+PASS  duplicate of a hit only (a,a,a,a,a)      rec=['a', 'a', 'a', 'a', 'a']  expected=0.200000  computed=0.200000
+PASS  list longer than k is truncated          rec=['x', 'y', 'z', 'w', 'v', 'a']  expected=0.000000  computed=0.000000
+PASS  map_at_k with a missing user scores it 0: expected=0.346667 computed=0.346667
+all evaluator tests passed

@@ -1,0 +1,20 @@
+task,stage,seconds,history_exposure_seconds,ppr_seconds,cbf_seconds,candidates_seconds,features_seconds,peak_memory_mb_so_far
+inner,feature build (all sources + candidates + features),50.4,9.0,12.2,9.2,2.4,17.5,1096.0
+val,feature build (all sources + candidates + features),57.2,17.2,13.1,12.0,2.2,12.7,1460.0
+test,feature build (all sources + candidates + features),61.4,24.2,9.8,9.3,1.5,16.5,1460.0
+inner,M1 fusion grid (4092 configs),380.6,,,,,,
+inner,M2 CV (2 x 3 fits),43.0,,,,,,
+inner,M3_lambdarank CV (12 configs x 3 folds),343.7,,,,,,
+inner,M4_lgb_binary CV (12 configs x 3 folds),493.1,,,,,,
+inner,M2 final fit,9.6,,,,,,
+val,M2 inference,0.8,,,,,,
+inner,M3_lambdarank final fit (early stopping + refit),9.1,,,,,,
+val,M3_lambdarank inference,0.94,,,,,,
+inner,M4_lgb_binary final fit (early stopping + refit),26.8,,,,,,
+val,M4_lgb_binary inference,10.38,,,,,,
+val,P2 5-fold CV (3 models),127.9,,,,,,
+inner->val,ablation (16 M3 fits),172.6,,,,,,
+inner->val,candidate-size sensitivity (4 M3 fits),65.7,,,,,,
+inner+val,"P3 final fits (M2, M3, M4)",54.8,,,,,,
+test,P3 inference (all models),2.38,,,,,,
+all,whole step,2226.7,,,,,,1609.0

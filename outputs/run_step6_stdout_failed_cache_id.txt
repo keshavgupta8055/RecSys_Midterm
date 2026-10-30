@@ -1,0 +1,102 @@
+ task  users  sub_users  pool_size  history_rows history_start history_end_excl  history_weeks target_start target_end_excl  target_weeks  truth_pairs  share_truth_pairs_in_history
+inner   3785       1086       4402        925145    2020-03-09       2020-04-13            5.0   2020-04-13      2020-05-18           5.0        18925                      0.633078
+  val   4030       1150       6376       1824077    2020-03-09       2020-05-18           10.0   2020-05-18      2020-07-27          10.0        20150                      0.653151
+ test   1260       1260       6642       3014110    2020-03-09       2020-07-27           20.0   2020-07-27      2020-10-19          12.0            0                           NaN
+[C] building candidates + features for inner ...
+    {'task': 'inner', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 34.0, 'history_exposure_seconds': 7.0, 'ppr_seconds': 5.9, 'cbf_seconds': 8.2, 'candidates_seconds': 1.8, 'features_seconds': 11.2, 'peak_memory_mb_so_far': 1305}
+[C] building candidates + features for val ...
+    {'task': 'val', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 68.1, 'history_exposure_seconds': 15.2, 'ppr_seconds': 15.5, 'cbf_seconds': 15.8, 'candidates_seconds': 2.9, 'features_seconds': 18.6, 'peak_memory_mb_so_far': 1305}
+[C] building candidates + features for test ...
+    {'task': 'test', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 60.1, 'history_exposure_seconds': 26.7, 'ppr_seconds': 12.1, 'cbf_seconds': 7.9, 'candidates_seconds': 0.9, 'features_seconds': 12.4, 'peak_memory_mb_so_far': 1305}
+[A] Steps 3-5 reproduced exactly: {'pop_recent': 0.2398, 'PF_softfrac': 0.3237, 'M0_PF_exposure': 0.3406, 'PPR': 0.3256, 'cbf_pop': 0.2783, 'cbf_pure': 0.1815}
+ task  users   rows  mean_candidates  median_candidates  max_candidates  min_candidates  candidate_recall_truth_pairs  history_ceiling_any_watch
+inner   3785 253851          67.0676               66.0             107              20                        0.6587                     0.6331
+  val   4030 280268          69.5454               69.0             102              20                        0.6559                     0.6532
+ test   1260  92096          73.0921               71.0             105              20                           NaN                        NaN
+ task source  k  truth_pairs_in_source  truth_pairs_found_only_by_source  share_of_truth_pairs_only_by_source
+inner     pf 30                  11225                                 4                               0.0002
+inner    pfx 30                  11416                                95                               0.0050
+inner    ppr 20                  10787                                42                               0.0022
+inner cbfpop 30                   9568                                95                               0.0050
+inner    cbf 30                   7473                                37                               0.0020
+inner    pop 20                   8785                               321                               0.0170
+  val     pf 30                  11561                                10                               0.0005
+  val    pfx 30                  11959                               195                               0.0097
+  val    ppr 20                  11239                                44                               0.0022
+  val cbfpop 30                   9700                                99                               0.0049
+  val    cbf 30                   7303                                43                               0.0021
+  val    pop 20                   9263                               508                               0.0252
+             user_id  tv_show_id  new_show  ex_zero_us  features_compared  max_abs_diff
+11991278120371551072    10002451     False        True                 31  0.000000e+00
+11991278120371551072      200337      True        True                 31  0.000000e+00
+11991278120371551072      200456      True        True                 31  0.000000e+00
+11991278120371551072     6600437      True        True                 31  0.000000e+00
+11991278120371551072    12001734      True        True                 31  0.000000e+00
+14349040942184232238    10003159     False        True                 31  0.000000e+00
+14349040942184232238      200469      True        True                 31  0.000000e+00
+14349040942184232238      200432     False       False                 31  0.000000e+00
+14349040942184232238     6200371     False       False                 31  0.000000e+00
+14349040942184232238    10002514     False       False                 31  0.000000e+00
+ 8051478594206597347    90014056     False        True                 31  0.000000e+00
+ 8051478594206597347      200337      True        True                 31  0.000000e+00
+ 8051478594206597347      200405      True        True                 31  0.000000e+00
+ 8051478594206597347     6600437      True        True                 31  0.000000e+00
+ 8051478594206597347    10002515      True        True                 31  0.000000e+00
+15848011677771361594    12002201     False        True                 31  0.000000e+00
+15848011677771361594      200337      True        True                 31  0.000000e+00
+15848011677771361594      500281     False       False                 31  0.000000e+00
+15848011677771361594    12002896      True        True                 31  0.000000e+00
+15848011677771361594    90074341      True        True                 31  0.000000e+00
+ 8152220956056607861    10002451     False        True                 31  0.000000e+00
+ 8152220956056607861      200337      True        True                 31  0.000000e+00
+ 8152220956056607861      400357     False       False                 31  1.776357e-15
+ 8152220956056607861    90072485     False       False                 31  0.000000e+00
+ 8152220956056607861    90076806     False       False                 31  0.000000e+00
+ 1749475349157220203    10002451     False        True                 31  3.552714e-15
+ 1749475349157220203      200505      True        True                 31  0.000000e+00
+ 1749475349157220203      200432     False       False                 31  8.881784e-16
+ 1749475349157220203     5900348     False       False                 31  8.673617e-19
+ 1749475349157220203     6700435     False       False                 31  2.710505e-20
+Hand-worked features: val task, user 8152220956056607861, show 400357 ('Холостяк', 10 сезон, 10 эп., 1 ч.); history 2020-03-09 .. 2020-05-18 (exclusive, 10 weeks), target 2020-05-18 .. 2020-07-27 (10 weeks)
+raw interaction rows (airing_start, channel, airing_duration, watched_seconds, frac, iso_week):
+  2020-03-13 18:00:00  ch 6  dur 3600  watched 3598  frac 0.999444  week 11  (qualifying)
+  2020-03-13 19:00:00  ch 6  dur 10800  watched 1297  frac 0.120093  week 11
+  2020-03-20 15:30:00  ch 6  dur 7200  watched 4581  frac 0.636250  week 12
+  2020-03-27 19:00:00  ch 6  dur 10800  watched 2712  frac 0.251111  week 13
+  2020-04-03 15:25:00  ch 6  dur 7500  watched 6911  frac 0.921467  week 14  (qualifying)
+  2020-04-03 18:00:00  ch 6  dur 3600  watched 3333  frac 0.925833  week 14  (qualifying)
+  2020-04-03 19:00:00  ch 6  dur 10800  watched 3644  frac 0.337407  week 14
+  2020-04-10 15:25:00  ch 6  dur 7500  watched 4654  frac 0.620533  week 15
+  2020-04-17 15:35:00  ch 6  dur 6900  watched 758  frac 0.109855  week 16
+  2020-04-17 22:45:00  ch 6  dur 1200  watched 1200  frac 1.000000  week 16  (qualifying)
+  2020-04-24 19:00:00  ch 6  dur 10800  watched 1267  frac 0.117315  week 17
+  2020-05-01 15:25:00  ch 6  dur 7500  watched 6057  frac 0.807600  week 18  (qualifying)
+  2020-05-01 18:00:00  ch 6  dur 3600  watched 3600  frac 1.000000  week 18  (qualifying)
+  2020-05-01 19:00:00  ch 6  dur 10800  watched 5527  frac 0.511759  week 18
+  2020-05-08 15:40:00  ch 6  dur 6600  watched 5784  frac 0.876364  week 19  (qualifying)
+  2020-05-15 14:50:00  ch 6  dur 9600  watched 5317  frac 0.553854  week 20
+  2020-05-15 19:00:00  ch 6  dur 10800  watched 6046  frac 0.559815  week 20
+softfrac = 0.999444 + 0.120093 + 0.636250 + 0.251111 + 0.921467 + 0.925833 + 0.337407 + 0.620533 + 0.109855 + 1.000000 + 0.117315 + 0.807600 + 1.000000 + 0.511759 + 0.876364 + 0.553854 + 0.559815 = 10.348701
+qualifying count = #rows with frac >= 0.8 = 7
+weeks_active (distinct ISO weeks with a qualifying watch) = [11, 14, 16, 18, 19] -> 5; share = 5 / 10 = 0.500000
+user's channels for this show C_us = [6]
+A_train_us = labelled airings of the show starting in the history window on C_us = 33 (all channels: 33)
+A_target_us = labelled airings in the target window on C_us = 8 (all channels: 8); schedule only
+exposure ratio = A_target_us / max(A_train_us, 1) = 8 / 33 = 0.242424; rate ratio = (8/10) / max(33/10, 1/10) = 0.242424
+vectorised: raw_softfrac=10.348701, raw_q=7.000000, raw_weeks_q=5.000000, raw_a_train=33.000000, raw_a_target=8.000000, raw_ex_ratio_us=0.242424
+[D2c] {'pairs': 857090, 'share_pairs_softfrac_changed': 0.12483169795470721, 'pairs_disappearing': 68156}
+[D3] inner features rebuilt identical: True
+[E/M1] fusion grids on inner (w in {0, 0.5, 1, 2}^5, k0 in {10, 30, 60})
+  best rrf: {'fusion': 'rrf', 'k0': 10.0, 'w_pf': 0.5, 'w_pfx': 2.0, 'w_ppr': 0.0, 'w_cbfpop': 0.5, 'w_pop': 0.0, 'inner_map5': 0.35802377807133423}
+  best zscore: {'fusion': 'zscore', 'k0': nan, 'w_pf': 0.0, 'w_pfx': 2.0, 'w_ppr': 0.0, 'w_cbfpop': 0.5, 'w_pop': 0.0, 'inner_map5': 0.35980889476001765}
+[E] model selection by 3-fold user-grouped CV on the inner task (never on val)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\DELL\Downloads\RECSYS_MIDTERM\src\run_step6.py", line 439, in <module>
+    sc_.append(fast_map(Fi[fold_i == f], lr_predict(mdl, Fi[fold_i == f], FEATURES)))
+               ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\Downloads\RECSYS_MIDTERM\src\run_step6.py", line 106, in fast_map
+    S2[uc, pos] = np.asarray(score, float)
+    ~~^^^^^^^^^
+ValueError: shape mismatch: value array of shape (84667,) could not be broadcast to indexing result of shape (84628,)

@@ -1,0 +1,3 @@
+group,users_ge5_in_W1,top5_pairs,share_pairs_qualifying_in_W3,share_pairs_any_watch_in_W3,distinct_target_shows,distinct_target_shows_with_0_airings_in_11-20_schedule,share_pairs_show_absent_from_11-20_schedule
+all_users,4030,20150,0.5082382133995037,0.6531513647642679,1484,396,0.07429280397022331
+submission_users,1150,5750,0.5664347826086956,0.7102608695652174,774,186,0.06260869565217386

@@ -1,0 +1,12 @@
+method,runtime_s
+pop_users,0.68
+pop_pairs,0.41
+pop_hours,0.5
+pop_recent,0.51
+PF_count_0.8,5.89
+PF_count_0.5,5.55
+PF_softfrac,7.71
+PF_seconds,5.76
+PF_decay_hl2,5.8
+PF_decay_hl4,7.0
+PF_decay_hl8,6.19

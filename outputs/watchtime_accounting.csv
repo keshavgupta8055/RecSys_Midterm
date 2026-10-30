@@ -1,0 +1,13 @@
+group,bucket,seconds,share
+all_users,(i) labelled airings (tv_show_id != 0),4497204988,0.5288968974187732
+all_users,(ii) unlabelled airings (tv_show_id = 0),3499159527,0.4115210719417716
+all_users,(iii) channels absent from schedules,115801429,0.013618907005170376
+all_users,"(iv) gaps, not covered by any airing",390828723,0.0459636817908913
+all_users,correction: seconds counted twice in (i)+(ii) where airings overlap,-4746,-5.581566065694976e-07
+all_users,TOTAL merged watched seconds,8502989921,1.0
+submission_users,(i) labelled airings (tv_show_id != 0),1485507622,0.514409465851036
+submission_users,(ii) unlabelled airings (tv_show_id = 0),1229731084,0.42583780836424107
+submission_users,(iii) channels absent from schedules,41649889,0.014422744680636139
+submission_users,"(iv) gaps, not covered by any airing",130905372,0.0453306071879254
+submission_users,correction: seconds counted twice in (i)+(ii) where airings overlap,-1808,-6.260838386049513e-07
+submission_users,TOTAL merged watched seconds,2887792159,1.0

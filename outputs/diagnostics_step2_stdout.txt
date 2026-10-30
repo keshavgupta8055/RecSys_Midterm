@@ -1,0 +1,99 @@
+           group                                                              bucket    seconds         share
+       all_users                              (i) labelled airings (tv_show_id != 0) 4497204988  5.288969e-01
+       all_users                            (ii) unlabelled airings (tv_show_id = 0) 3499159527  4.115211e-01
+       all_users                                (iii) channels absent from schedules  115801429  1.361891e-02
+       all_users                                (iv) gaps, not covered by any airing  390828723  4.596368e-02
+       all_users correction: seconds counted twice in (i)+(ii) where airings overlap      -4746 -5.581566e-07
+       all_users                                        TOTAL merged watched seconds 8502989921  1.000000e+00
+submission_users                              (i) labelled airings (tv_show_id != 0) 1485507622  5.144095e-01
+submission_users                            (ii) unlabelled airings (tv_show_id = 0) 1229731084  4.258378e-01
+submission_users                                (iii) channels absent from schedules   41649889  1.442274e-02
+submission_users                                (iv) gaps, not covered by any airing  130905372  4.533061e-02
+submission_users correction: seconds counted twice in (i)+(ii) where airings overlap      -1808 -6.260838e-07
+submission_users                                        TOTAL merged watched seconds 2887792159  1.000000e+00
+           group  thr  qualifying_pairs  distinct_users  distinct_tv_show_ids  users_with_ge5_shows
+       all_users  0.5            938121            4871                  4071                  4766
+       all_users  0.6            815487            4865                  4019                  4722
+       all_users  0.7            708960            4854                  3950                  4684
+       all_users  0.8            611748            4841                  3866                  4633
+       all_users  0.9            521355            4828                  3772                  4534
+       all_users  1.0            421600            4769                  3540                  4281
+submission_users  0.5            307475            1256                  3880                  1250
+submission_users  0.6            265468            1256                  3775                  1248
+submission_users  0.7            229461            1256                  3656                  1244
+submission_users  0.8            196134            1256                  3539                  1241
+submission_users  0.9            165539            1255                  3354                  1225
+submission_users  1.0            131584            1247                  2952                  1197
+ iso_week  qualifying_pairs  active_users_viewlog  qualifying_users
+       10                 0                     0                 0
+       11             26189                  4697              3685
+       12             33344                  4721              3904
+       13             34407                  4689              3869
+       14             31464                  4666              3770
+       15             29046                  4658              3736
+       16             28158                  4682              3721
+       17             27214                  4638              3760
+       18             27431                  4599              3741
+       19             43593                  4606              3937
+       20             35876                  4220              3285
+       21             32637                  3572              2745
+       22             32547                  3562              2773
+       23             28367                  3440              2595
+       24             27489                  3252              2432
+       25             13732                  3108              2272
+       26              9948                  2406              1646
+       27             10933                  4275              2699
+       28             48511                  4620              3873
+       29             49302                  4620              3891
+       30             41560                  4565              3821
+           group  users  users_0_shows  users_ge1  users_ge5  median_shows  p90_shows  max_shows
+       all_users   4914             73       4841       4633          32.0      105.0        545
+submission_users   1260              4       1256       1241          40.0      116.1        329
+        window      start end_exclusive            group  users  ge1_shows  ge3_shows  ge5_shows
+W1 weeks 21-30 2020-05-18    2020-07-27        all_users   4914       4643       4333       4030
+W1 weeks 21-30 2020-05-18    2020-07-27 submission_users   1260       1238       1206       1150
+W2 weeks 25-30 2020-06-15    2020-07-27        all_users   4914       4569       4193       3757
+W2 weeks 25-30 2020-06-15    2020-07-27 submission_users   1260       1233       1188       1103
+W3 weeks 11-20 2020-03-09    2020-05-18        all_users   4914       4737       4553       4349
+W3 weeks 11-20 2020-03-09    2020-05-18 submission_users   1260       1242       1222       1197
+                                                                0                 1
+group                                                   all_users  submission_users
+users_ge5_in_W1                                              4030              1150
+top5_pairs                                                  20150              5750
+share_pairs_qualifying_in_W3                             0.508238          0.566435
+share_pairs_any_watch_in_W3                              0.653151          0.710261
+distinct_target_shows                                        1484               774
+distinct_target_shows_with_0_airings_in_11-20_schedule        396               186
+share_pairs_show_absent_from_11-20_schedule              0.074293          0.062609
+            distinct_users  qualifying_pairs                                        title_most_frequent        category    category_en
+tv_show_id                                                                                                                            
+2400480               3995             62449                                                       ТСН.            Инфо           Info
+240081                3808             45071                                                     Факты.            Инфо           Info
+2400467               2963             15260                                           'Викна-Новости'.            Инфо           Info
+2400508               2761             19264                                                   Сегодня.            Инфо           Info
+200344                2418              7233                                               'Чистоnews'.     Развлечения  Entertainment
+20088                 2335             21380  'Завтрак с 1+1'. Информационно-развлекательная программа.     Развлечения  Entertainment
+6700482               2150              6977                                       Секретные материалы.          Другое          Other
+12001682              1998             45230                          М/с 'Губка Боб Квадратные Штаны'.           Детям           Kids
+6500479               1890              5071                                           'Мир наизнанку'.  Познавательное    Educational
+10002514              1784              4629                                               Т/с 'Кухня'.         Сериалы         Series
+6200371               1375              3537                                                    ДжеДАИ.  Познавательное    Educational
+1100411               1351              4873                                                  'Вещдок'.  Познавательное    Educational
+2500413               1334              3689                                       Гражданская оборона.            Инфо           Info
+12002856              1314             12276                              М/с 'Элвиннн!!! и бурундуки'.           Детям           Kids
+500331                1310              3404                                            'Один за всех'.     Развлечения  Entertainment
+500281                1299              5223                                 Ток-шоу 'Говорит Украина'.     Развлечения  Entertainment
+200337                1253              4546                                            Утро с Интером.     Развлечения  Entertainment
+700389                1213              2880                                                Кто сверху?     Развлечения  Entertainment
+10002515              1199              2544                         Т/с 'Мамочки', 1 сезон, 19 и 20 с.         Сериалы         Series
+200432                1154              2480                                      Дизель-шоу. Дайджест.     Развлечения  Entertainment
+                              share_of_qualifying_pairs  share_of_labelled_airings_11_30
+Sport (Спорт)                                  0.000000                         0.000067
+Other (Другое)                                 0.014398                         0.004319
+Educational (Познавательное)                   0.040196                         0.029538
+Info (Инфо)                                    0.252339                         0.037838
+Entertainment (Развлечения)                    0.130850                         0.056892
+Films (Фильмы)                                 0.208032                         0.201267
+Series (Сериалы)                               0.102706                         0.271768
+Kids (Детям)                                   0.251479                         0.398312
+{'labelled_pairs_weeks_11_30': 3014110, 'labelled_pairs_week10': 0, 'runtime_seconds': 35.5, 'peak_memory_mb': 1187}

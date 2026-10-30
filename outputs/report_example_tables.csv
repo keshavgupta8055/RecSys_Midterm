@@ -1,0 +1,101 @@
+﻿role,user_id,method,rank,tv_show_id,title,category_en,hit,in_training_history,qualifying_count,watched_hours
+light,385172162373391221,pop_recent,1,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,pop_recent,2,240081,Факты.,Info,True,True,,
+light,385172162373391221,pop_recent,3,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,pop_recent,4,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,pop_recent,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Entertainment,False,True,,
+light,385172162373391221,PF_softfrac,1,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,PF_softfrac,2,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,PF_softfrac,3,240081,Факты.,Info,True,True,,
+light,385172162373391221,PF_softfrac,4,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,PF_softfrac,5,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,PPR,1,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,PPR,2,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,PPR,3,240081,Факты.,Info,True,True,,
+light,385172162373391221,PPR,4,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,PPR,5,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,cbf_pure,1,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,cbf_pure,2,5900347,'Деньги'.,Info,False,False,,
+light,385172162373391221,cbf_pure,3,10002697,"Т/с 'Позднее раскаяние', 1 с.",Series,False,True,,
+light,385172162373391221,cbf_pure,4,90073285,"Х/ф 'Моя новая жизнь', 1-4 с.",Films,False,True,,
+light,385172162373391221,cbf_pure,5,90077794,"Х/ф 'Поделись счастьем своим', 1-4 с.",Films,False,False,,
+light,385172162373391221,cbf_pop,1,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,cbf_pop,2,240081,Факты.,Info,True,True,,
+light,385172162373391221,cbf_pop,3,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,cbf_pop,4,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,cbf_pop,5,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,M0 exposure,1,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,M0 exposure,2,240081,Факты.,Info,True,True,,
+light,385172162373391221,M0 exposure,3,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,M0 exposure,4,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,M0 exposure,5,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,final hybrid M3,1,2400480,ТСН.,Info,True,True,,
+light,385172162373391221,final hybrid M3,2,240081,Факты.,Info,True,True,,
+light,385172162373391221,final hybrid M3,3,2400508,Сегодня.,Info,False,True,,
+light,385172162373391221,final hybrid M3,4,2400467,'Викна-Новости'.,Info,True,True,,
+light,385172162373391221,final hybrid M3,5,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,False,True,,
+light,385172162373391221,validation truth,1,240081,Факты.,Info,,,,
+light,385172162373391221,validation truth,2,2400480,ТСН.,Info,,,,
+light,385172162373391221,validation truth,3,2400467,'Викна-Новости'.,Info,,,,
+light,385172162373391221,validation truth,4,90050217,Х/ф 'Мумия возвращается'.,Films,,,,
+light,385172162373391221,validation truth,5,90063827,Х/ф 'Библиотекарь 2',Films,,,,
+light,385172162373391221,training top-10,1,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,,,21.0,29.676
+light,385172162373391221,training top-10,2,2400480,ТСН.,Info,,,9.0,19.62
+light,385172162373391221,training top-10,3,240081,Факты.,Info,,,7.0,11.504
+light,385172162373391221,training top-10,4,2400508,Сегодня.,Info,,,2.0,7.177
+light,385172162373391221,training top-10,5,90074376,"Х/ф 'Обучаю игре на гитаре', 1-4 с.",Films,,,2.0,3.883
+light,385172162373391221,training top-10,6,10001857,"Т/с 'Северный ветер', 1 с.",Series,,,2.0,1.699
+light,385172162373391221,training top-10,7,2400467,'Викна-Новости'.,Info,,,1.0,5.794
+light,385172162373391221,training top-10,8,90045395,"Х/ф 'Противостояние', 1 и 2 с.",Films,,,1.0,2.873
+light,385172162373391221,training top-10,9,6700482,Секретные материалы.,Other,,,1.0,2.445
+light,385172162373391221,training top-10,10,90065631,Х/ф 'Путешествие во влюбленность'.,Films,,,1.0,2.356
+heavy,5672174985970291620,pop_recent,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,pop_recent,2,240081,Факты.,Info,False,True,,
+heavy,5672174985970291620,pop_recent,3,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,pop_recent,4,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,pop_recent,5,20088,'Завтрак с 1+1'. Информационно-развлекательная программа.,Entertainment,False,True,,
+heavy,5672174985970291620,PF_softfrac,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,PF_softfrac,2,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,PF_softfrac,3,6500479,'Мир наизнанку'.,Educational,False,True,,
+heavy,5672174985970291620,PF_softfrac,4,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,PF_softfrac,5,500331,'Один за всех'.,Entertainment,False,True,,
+heavy,5672174985970291620,PPR,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,PPR,2,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,PPR,3,6500479,'Мир наизнанку'.,Educational,False,True,,
+heavy,5672174985970291620,PPR,4,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,PPR,5,240081,Факты.,Info,False,True,,
+heavy,5672174985970291620,cbf_pure,1,5900319,Абзац!,Info,False,True,,
+heavy,5672174985970291620,cbf_pure,2,5900347,'Деньги'.,Info,False,True,,
+heavy,5672174985970291620,cbf_pure,3,500368,Ток-шоу '60 минут' с Ольгой Скабеевой и Евгением Поповым.,Entertainment,False,False,,
+heavy,5672174985970291620,cbf_pure,4,500346,'Право на власть'.,Entertainment,False,True,,
+heavy,5672174985970291620,cbf_pure,5,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,cbf_pop,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,cbf_pop,2,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,cbf_pop,3,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,cbf_pop,4,240081,Факты.,Info,False,True,,
+heavy,5672174985970291620,cbf_pop,5,5900347,'Деньги'.,Info,False,True,,
+heavy,5672174985970291620,M0 exposure,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,M0 exposure,2,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,M0 exposure,3,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,M0 exposure,4,6500479,'Мир наизнанку'.,Educational,False,True,,
+heavy,5672174985970291620,M0 exposure,5,12002805,М/с 'Моланг'.,Kids,False,True,,
+heavy,5672174985970291620,final hybrid M3,1,2400480,ТСН.,Info,True,True,,
+heavy,5672174985970291620,final hybrid M3,2,2400467,'Викна-Новости'.,Info,True,True,,
+heavy,5672174985970291620,final hybrid M3,3,2400508,Сегодня.,Info,True,True,,
+heavy,5672174985970291620,final hybrid M3,4,6500479,'Мир наизнанку'.,Educational,False,True,,
+heavy,5672174985970291620,final hybrid M3,5,240081,Факты.,Info,False,True,,
+heavy,5672174985970291620,validation truth,1,2400480,ТСН.,Info,,,,
+heavy,5672174985970291620,validation truth,2,6700482,Секретные материалы.,Other,,,,
+heavy,5672174985970291620,validation truth,3,2400467,'Викна-Новости'.,Info,,,,
+heavy,5672174985970291620,validation truth,4,2400508,Сегодня.,Info,,,,
+heavy,5672174985970291620,validation truth,5,10003040,"Т/с 'Короткое слово 'нет', 3 с.",Series,,,,
+heavy,5672174985970291620,training top-10,1,2400480,ТСН.,Info,,,18.0,15.178
+heavy,5672174985970291620,training top-10,2,2400467,'Викна-Новости'.,Info,,,15.0,11.373
+heavy,5672174985970291620,training top-10,3,6500479,'Мир наизнанку'.,Educational,,,9.0,16.628
+heavy,5672174985970291620,training top-10,4,2400508,Сегодня.,Info,,,7.0,7.431
+heavy,5672174985970291620,training top-10,5,6700482,Секретные материалы.,Other,,,6.0,3.031
+heavy,5672174985970291620,training top-10,6,500331,'Один за всех'.,Entertainment,,,5.0,10.992
+heavy,5672174985970291620,training top-10,7,10003159,"Т/с 'Ничто не случается дважды', 10 с.",Series,,,5.0,5.032
+heavy,5672174985970291620,training top-10,8,12002805,М/с 'Моланг'.,Kids,,,5.0,0.3
+heavy,5672174985970291620,training top-10,9,10002893,Т/с 'Когда мы дома'.,Series,,,4.0,5.657
+heavy,5672174985970291620,training top-10,10,240081,Факты.,Info,,,4.0,1.837

@@ -1,0 +1,119 @@
+{
+  "feature_hash_superset": {
+    "inner": "2365cdc15d0da5918f35fb200946fa420b340528ff6a6b1997fb794f80c06cd7",
+    "val": "eb49f0d4478dcc68fc2d587166c4b9c42eb507ba11b7e90635d21a95046f798c",
+    "test": "40a091d936206a70723a98fd9c57879ff2bfebefe99a84718f21164bdc3ab994"
+  },
+  "baseline_results_val_sha256": "6015f3a106883b14815a072abdc8a779ef457091fa2084ab0e5ee503475f24bc",
+  "naive_features": {
+    "pairs": 30,
+    "features_each": 31,
+    "max_abs_diff": 3.552713678800501e-15
+  },
+  "history_shift_test": {
+    "pairs": 857090,
+    "share_pairs_softfrac_changed": 0.12483169795470721,
+    "pairs_disappearing": 68156
+  },
+  "feature_determinism_inner": true,
+  "M1": {
+    "rrf": {
+      "fusion": "rrf",
+      "k0": 10.0,
+      "w_pf": 0.5,
+      "w_pfx": 2.0,
+      "w_ppr": 0.0,
+      "w_cbfpop": 0.5,
+      "w_pop": 0.0,
+      "inner_map5": 0.35802377807133423
+    },
+    "zscore": {
+      "fusion": "zscore",
+      "k0": NaN,
+      "w_pf": 0.0,
+      "w_pfx": 2.0,
+      "w_ppr": 0.0,
+      "w_cbfpop": 0.5,
+      "w_pop": 0.0,
+      "inner_map5": 0.35980889476001765
+    },
+    "chosen_on_inner": "zscore"
+  },
+  "selected_hyperparameters": {
+    "M2_logreg": {
+      "C": 1.0
+    },
+    "M3_lambdarank": {
+      "leaves": 31,
+      "lr": 0.1,
+      "mcs": 20
+    },
+    "M4_lgb_binary": {
+      "leaves": 31,
+      "lr": 0.03,
+      "mcs": 20
+    }
+  },
+  "n_estimators": {
+    "M3_lambdarank": 59,
+    "M4_lgb_binary": 365
+  },
+  "P1": {
+    "best_hybrid": "M3_lambdarank",
+    "hybrid_vs_M0_ALL": [
+      0.007547559966914805,
+      0.004998180314309347,
+      0.009861083540115799
+    ],
+    "final_strategy": "M3_lambdarank"
+  },
+  "leakage_tests": {
+    "M3_trained_on_permuted_inner_labels_val_map": 0.053470636889991735,
+    "random_reranking_inside_candidates_val_map": 0.02229528535980149,
+    "real_M3_vs_truth_shuffled_across_val_users_map": 0.1617485525227461,
+    "real_M3_val_map": 0.3481794871794872
+  },
+  "test": {
+    "sub06_model": "M3_lambdarank",
+    "sub06_selected_by_rule": true,
+    "users_without_candidates": 0,
+    "users_with_only_popularity_candidates": 2,
+    "users_padded_sub06": 0,
+    "mean_overlap_sub06_vs_sub05": 4.055555555555555,
+    "mean_overlap_sub07_vs_sub05": 4.476190476190476,
+    "share_identical_lists_sub06_vs_sub05": 0.09206349206349207
+  },
+  "gap_closed": {
+    "ALL": 0.07440674179304205,
+    "SUB": 0.08004601011229448
+  },
+  "gap_closed_M0": {
+    "ALL": 0.05149980795830818,
+    "SUB": 0.05786847397035812
+  },
+  "runtime_seconds": 2226.7,
+  "peak_memory_mb": 1609,
+  "sha256_excluding_timing_columns": {
+    "tasks_summary.csv": "c4aa30f4ba58e2eb21326049675cf70373e9a608fe92815b4a36e368b257f43c",
+    "hybrid_candidates_summary.csv": "68a90225ce34e6d308385dcef28adaaf88abf6d4a8353e0449b8b41ae5fcac4b",
+    "hybrid_candidates_by_source.csv": "cdd42c512b3be6a4d2956cd3cca2c43dba08d575084447270b7338a9b87c95db",
+    "verify_features_naive.csv": "c5c8dc664087b067ca49bc6c520fd83dc383b8e2da17088447964e6805e3660b",
+    "verify_features_hand.txt": "c9f3af14458a15ab00d71625e6c983fc5f196b6a726b9f8977b88e7e58d99636",
+    "hybrid_m1_fusion_grid_inner.csv": "d9ce748bf10e29b30e94be203bfaf4292f78d5113b04bc3e7f4de746f7ee0e8c",
+    "hybrid_model_selection_inner_cv.csv": "de9a31a4e591f9c3bef37d02f523a203ae05558f404cd79c90d48ca0af1117b7",
+    "hybrid_p1_results_val.csv": "5acec79f66d60be4d0cea18fce8a25c4a56fc9dae36ee0920ff8c2b0565a4103",
+    "hybrid_p1_paired_diffs_val.csv": "06fe33ffbc13ca78ec53f8a1fe16b6bca4349a0f64caa1216edb16eae9e3e513",
+    "hybrid_p2_cv_val.csv": "56511692c2082fab4899fa88128b756f874076fde43991cb6ab904fd9c7aaab0",
+    "hybrid_ablation_val.csv": "125e91808f38d375f2b65d6ce7eebb22ab63b959db451df9ca438fde8829d095",
+    "hybrid_feature_importance_M3.csv": "75b3dcafda121e9c110712345b0ef000e7504420ed43c0c5d455625f0879c051",
+    "hybrid_candidate_size_sensitivity.csv": "9c0cc56c1ce86b168c90a8bf77ae5acdcb68a510d26710c8ea3710f58eec00ba",
+    "hybrid_breakdowns_val.csv": "5e87c7e3773d9c0aa12ee181a73679b297bac7ebc5e4c2daa5c2764791905fff",
+    "hybrid_robustness_windows_val.csv": "b9dc7043f82d09b02af076cbe6e241d07cb7548c01dd0d9eb390dd1a07f5d463",
+    "hybrid_lists_analysis_val.csv": "cc3d04ed80720fe84ea4fdcc169b5afb060453dc18ee2a563dc92ffdd2f9fdb5",
+    "hybrid_failure_groups_val.csv": "ae2ef38f643d356ce879c3fa50433d2c2fb5628c19b8bf516a437c13bad7e06f",
+    "hybrid_failure_cases_val.csv": "f6f52bf33dcba71706ae457729e735071143d97367941ee7d70f3c1662fbb442",
+    "example_users_hybrid.csv": "85cff3ce2280305e478239533799aa01cf38e95eaed4145ed626399f08f414a8",
+    "submissions/sub06_hybrid.csv": "7c330b884d79340491717181e9dfe3c6c1a3c721aa8a750a5948858fb0a177c7",
+    "submissions/sub07_fusion.csv": "a8c31a09460f15a87863e2439e1c97440f30643f129ab3b803d324659762a4ba"
+  }
+}

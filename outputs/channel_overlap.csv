@@ -1,0 +1,4 @@
+schedule,view_channels,schedule_channels,intersection,view_channels_not_in_schedule,schedule_channels_not_in_views,view_rows_on_matched_channels,share_view_rows_matched
+11-20,202,400,193,9,207,5651373,0.9707
+21-30,202,403,196,6,207,5705190,0.9799
+31-42,202,404,196,6,208,5705190,0.9799

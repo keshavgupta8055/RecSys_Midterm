@@ -1,0 +1,4 @@
+method,distinct_shows_recommended,pool_size,catalogue_coverage,share_lists_ge3_categories,mean_pairwise_category_diversity
+pop_recent,5,6376,0.0007841907151819323,0.0,0.4
+PF_softfrac,675,6376,0.10586574654956085,0.6347394540942928,0.6666004962779157
+PPR,513,6376,0.08045796737766625,0.6295285359801489,0.6667245657568238

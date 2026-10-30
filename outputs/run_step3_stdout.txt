@@ -1,0 +1,190 @@
+VAL split: {'pool_size': 6376, 'pool_size_literal_schedule_21_30_only_from_W21': 6363, 'train_rows': 1824077, 'users': 4030, 'sub_users': 1150}
+{'method': 'pop_users', 'family': 'popularity baseline', 'map5_ALL': 0.21379487179487178, 'ci_lo_ALL': 0.20754276261373036, 'ci_hi_ALL': 0.21966921009098428, 'n_ALL': 4030, 'mean_padded_ALL': 0.0, 'map5_SUB': 0.2356985507246377, 'ci_lo_SUB': 0.2247772463768116, 'ci_hi_SUB': 0.24880347826086954, 'n_SUB': 1150, 'mean_padded_SUB': 0.0}
+{'method': 'pop_pairs', 'family': 'popularity baseline', 'map5_ALL': 0.23654342431761785, 'ci_lo_ALL': 0.23029354838709679, 'ci_hi_ALL': 0.24280924317617866, 'n_ALL': 4030, 'mean_padded_ALL': 0.0, 'map5_SUB': 0.2637333333333333, 'ci_lo_SUB': 0.25210652173913045, 'ci_hi_SUB': 0.27762079710144927, 'n_SUB': 1150, 'mean_padded_SUB': 0.0}
+{'method': 'pop_hours', 'family': 'popularity baseline', 'map5_ALL': 0.22805045492142267, 'ci_lo_ALL': 0.2213596153846154, 'ci_hi_ALL': 0.23468662117452443, 'n_ALL': 4030, 'mean_padded_ALL': 0.0, 'map5_SUB': 0.2528057971014493, 'ci_lo_SUB': 0.24115108695652177, 'ci_hi_SUB': 0.26702630434782615, 'n_SUB': 1150, 'mean_padded_SUB': 0.0}
+{'method': 'pop_recent', 'family': 'popularity baseline', 'map5_ALL': 0.23980727874276261, 'ci_lo_ALL': 0.23284588502894954, 'ci_hi_ALL': 0.246570988420182, 'n_ALL': 4030, 'mean_padded_ALL': 0.0, 'map5_SUB': 0.2655594202898551, 'ci_lo_SUB': 0.2528363043478261, 'ci_hi_SUB': 0.2798810144927536, 'n_SUB': 1150, 'mean_padded_SUB': 0.0}
+chosen popularity baseline (best mean of ALL and SUB MAP@5): pop_recent
+{'method': 'PF_count_0.8', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.31005789909015713, 'ci_lo_ALL': 0.30286598428453265, 'ci_hi_ALL': 0.3175348221670803, 'n_ALL': 4030, 'mean_padded_ALL': 0.17642679900744418, 'map5_SUB': 0.3496144927536232, 'ci_lo_SUB': 0.3357716666666667, 'ci_hi_SUB': 0.36386224637681164, 'n_SUB': 1150, 'mean_padded_SUB': 0.10086956521739131}
+{'method': 'PF_count_0.5', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.31602812241521916, 'ci_lo_ALL': 0.3089809760132341, 'ci_hi_ALL': 0.3234610628618694, 'n_ALL': 4030, 'mean_padded_ALL': 0.0913151364764268, 'map5_SUB': 0.35391014492753625, 'ci_lo_SUB': 0.3397622463768116, 'ci_hi_SUB': 0.36752478260869564, 'n_SUB': 1150, 'mean_padded_SUB': 0.05217391304347826}
+{'method': 'PF_softfrac', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.3236633581472291, 'ci_lo_ALL': 0.3167923697270471, 'ci_hi_ALL': 0.331122994210091, 'n_ALL': 4030, 'mean_padded_ALL': 0.044168734491315136, 'map5_SUB': 0.3599913043478261, 'ci_lo_SUB': 0.345714347826087, 'ci_hi_SUB': 0.37376333333333334, 'n_SUB': 1150, 'mean_padded_SUB': 0.03391304347826087}
+{'method': 'PF_seconds', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.2292928039702233, 'ci_lo_ALL': 0.2230520678246485, 'ci_hi_ALL': 0.23639722911497107, 'n_ALL': 4030, 'mean_padded_ALL': 0.044168734491315136, 'map5_SUB': 0.2608956521739131, 'ci_lo_SUB': 0.24843608695652178, 'ci_hi_SUB': 0.273698768115942, 'n_SUB': 1150, 'mean_padded_SUB': 0.03391304347826087}
+{'method': 'PF_decay_hl2', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.2867055417700579, 'ci_lo_ALL': 0.27991526054590576, 'ci_hi_ALL': 0.29394857320099255, 'n_ALL': 4030, 'mean_padded_ALL': 0.17642679900744418, 'map5_SUB': 0.3221971014492753, 'ci_lo_SUB': 0.3075171739130435, 'ci_hi_SUB': 0.3360136231884058, 'n_SUB': 1150, 'mean_padded_SUB': 0.10086956521739131}
+{'method': 'PF_decay_hl4', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.3043664185277089, 'ci_lo_ALL': 0.2976349875930521, 'ci_hi_ALL': 0.31220270885028945, 'n_ALL': 4030, 'mean_padded_ALL': 0.17642679900744418, 'map5_SUB': 0.34398840579710144, 'ci_lo_SUB': 0.3304602898550724, 'ci_hi_SUB': 0.3585957971014493, 'n_SUB': 1150, 'mean_padded_SUB': 0.10086956521739131}
+{'method': 'PF_decay_hl8', 'family': 'personal-frequency baseline (padded with pop_recent)', 'map5_ALL': 0.3085624483043838, 'ci_lo_ALL': 0.30138589743589744, 'ci_hi_ALL': 0.3163015508684864, 'n_ALL': 4030, 'mean_padded_ALL': 0.17642679900744418, 'map5_SUB': 0.35015942028985503, 'ci_lo_SUB': 0.33614355072463764, 'ci_hi_SUB': 0.36494586956521746, 'n_SUB': 1150, 'mean_padded_SUB': 0.10086956521739131}
+      method  map5_ALL  ci_lo_ALL  ci_hi_ALL  map5_SUB  ci_lo_SUB  ci_hi_SUB  mean_padded_ALL  mean_padded_SUB
+   pop_users    0.2138     0.2075     0.2197    0.2357     0.2248     0.2488           0.0000           0.0000
+   pop_pairs    0.2365     0.2303     0.2428    0.2637     0.2521     0.2776           0.0000           0.0000
+   pop_hours    0.2281     0.2214     0.2347    0.2528     0.2412     0.2670           0.0000           0.0000
+  pop_recent    0.2398     0.2328     0.2466    0.2656     0.2528     0.2799           0.0000           0.0000
+PF_count_0.8    0.3101     0.3029     0.3175    0.3496     0.3358     0.3639           0.1764           0.1009
+PF_count_0.5    0.3160     0.3090     0.3235    0.3539     0.3398     0.3675           0.0913           0.0522
+ PF_softfrac    0.3237     0.3168     0.3311    0.3600     0.3457     0.3738           0.0442           0.0339
+  PF_seconds    0.2293     0.2231     0.2364    0.2609     0.2484     0.2737           0.0442           0.0339
+PF_decay_hl2    0.2867     0.2799     0.2939    0.3222     0.3075     0.3360           0.1764           0.1009
+PF_decay_hl4    0.3044     0.2976     0.3122    0.3440     0.3305     0.3586           0.1764           0.1009
+PF_decay_hl8    0.3086     0.3014     0.3163    0.3502     0.3361     0.3649           0.1764           0.1009
+runtimes (s): {'pop_users': 0.68, 'pop_pairs': 0.41, 'pop_hours': 0.5, 'pop_recent': 0.51, 'PF_count_0.8': 5.89, 'PF_count_0.5': 5.55, 'PF_softfrac': 7.71, 'PF_seconds': 5.76, 'PF_decay_hl2': 5.8, 'PF_decay_hl4': 7.0, 'PF_decay_hl8': 6.19}
+chosen personal baseline: PF_softfrac
+population                 comparison  mean_diff   ci_lo   ci_hi
+       ALL   PF_softfrac - pop_recent    0.08386 0.07701 0.09001
+       ALL PF_softfrac - PF_count_0.8    0.01361 0.01115 0.01617
+       ALL PF_softfrac - PF_count_0.5    0.00764 0.00575 0.00953
+       ALL   PF_softfrac - PF_seconds    0.09437 0.09019 0.09849
+       ALL PF_softfrac - PF_decay_hl2    0.03696 0.03299 0.04070
+       ALL PF_softfrac - PF_decay_hl4    0.01930 0.01613 0.02239
+       ALL PF_softfrac - PF_decay_hl8    0.01510 0.01234 0.01815
+       SUB   PF_softfrac - pop_recent    0.09443 0.08209 0.10682
+       SUB PF_softfrac - PF_count_0.8    0.01038 0.00507 0.01519
+       SUB PF_softfrac - PF_count_0.5    0.00608 0.00247 0.00978
+       SUB   PF_softfrac - PF_seconds    0.09910 0.09019 0.10832
+       SUB PF_softfrac - PF_decay_hl2    0.03779 0.03019 0.04585
+       SUB PF_softfrac - PF_decay_hl4    0.01600 0.00955 0.02265
+       SUB PF_softfrac - PF_decay_hl8    0.00983 0.00383 0.01606
+                                                     0         1
+population                                         ALL       SUB
+users                                             4030      1150
+truth_pairs                                      20150      5750
+share_truth_in_history_any_watch              0.653151  0.710261
+share_truth_in_history_qualifying             0.508238  0.566435
+ceiling_map5_history_any_watch                0.653151  0.710261
+ceiling_map5_history_qualifying               0.508238  0.566435
+share_truth_shows_absent_from_11_20_schedule  0.074293  0.062609
+map5_pop_recent                               0.239807  0.265559
+map5_PF_softfrac                              0.323663  0.359991
+                   truth_window      method population  users   map5  ci_lo  ci_hi
+              main: weeks 21-30  pop_recent        ALL   4030 0.2398 0.2328 0.2466
+              main: weeks 21-30  pop_recent        SUB   1150 0.2656 0.2528 0.2799
+              main: weeks 21-30 PF_softfrac        ALL   4030 0.3237 0.3168 0.3311
+              main: weeks 21-30 PF_softfrac        SUB   1150 0.3600 0.3457 0.3738
+clean: 21-24 + 28-30 (no 25-27)  pop_recent        ALL   3925 0.2307 0.2239 0.2373
+clean: 21-24 + 28-30 (no 25-27)  pop_recent        SUB   1128 0.2545 0.2412 0.2680
+clean: 21-24 + 28-30 (no 25-27) PF_softfrac        ALL   3925 0.3148 0.3069 0.3219
+clean: 21-24 + 28-30 (no 25-27) PF_softfrac        SUB   1128 0.3486 0.3354 0.3630
+                    weeks 21-25  pop_recent        ALL   2558 0.2253 0.2169 0.2333
+                    weeks 21-25  pop_recent        SUB    775 0.2346 0.2203 0.2493
+                    weeks 21-25 PF_softfrac        ALL   2558 0.3234 0.3142 0.3324
+                    weeks 21-25 PF_softfrac        SUB    775 0.3507 0.3335 0.3671
+                    weeks 26-30  pop_recent        ALL   3663 0.1974 0.1908 0.2038
+                    weeks 26-30  pop_recent        SUB   1078 0.2185 0.2061 0.2309
+                    weeks 26-30 PF_softfrac        ALL   3663 0.2676 0.2603 0.2754
+                    weeks 26-30 PF_softfrac        SUB   1078 0.2958 0.2818 0.3095
+population activity_bucket      method  users   map5  ci_lo  ci_hi
+       ALL             0-4  pop_recent    218 0.1240 0.1007 0.1490
+       ALL             0-4 PF_softfrac    218 0.1170 0.0956 0.1373
+       ALL             5-9  pop_recent    383 0.1480 0.1297 0.1686
+       ALL             5-9 PF_softfrac    383 0.1980 0.1793 0.2198
+       ALL           10-19  pop_recent   1104 0.1986 0.1865 0.2112
+       ALL           10-19 PF_softfrac   1104 0.2793 0.2661 0.2931
+       ALL           20-49  pop_recent   1894 0.2731 0.2628 0.2833
+       ALL           20-49 PF_softfrac   1894 0.3744 0.3636 0.3850
+       ALL             50+  pop_recent    431 0.3391 0.3178 0.3613
+       ALL             50+ PF_softfrac    431 0.4305 0.4091 0.4527
+       SUB             0-4  pop_recent     38 0.1382 0.0849 0.1931
+       SUB             0-4 PF_softfrac     38 0.0945 0.0556 0.1368
+       SUB             5-9  pop_recent     67 0.1735 0.1210 0.2291
+       SUB             5-9 PF_softfrac     67 0.2310 0.1777 0.2872
+       SUB           10-19  pop_recent    292 0.2124 0.1890 0.2353
+       SUB           10-19 PF_softfrac    292 0.3032 0.2780 0.3302
+       SUB           20-49  pop_recent    605 0.2905 0.2722 0.3086
+       SUB           20-49 PF_softfrac    605 0.3991 0.3811 0.4181
+       SUB             50+  pop_recent    148 0.3428 0.3040 0.3825
+       SUB             50+ PF_softfrac    148 0.4386 0.4031 0.4718
+     method population  rank  hit_rate_at_rank  share_of_all_hits  mean_hits_per_user
+ pop_recent        ALL     1            0.4983             0.3326              1.4980
+ pop_recent        ALL     2            0.4199             0.2803              1.4980
+ pop_recent        ALL     3            0.1705             0.1138              1.4980
+ pop_recent        ALL     4            0.2223             0.1484              1.4980
+ pop_recent        ALL     5            0.1871             0.1249              1.4980
+ pop_recent        SUB     1            0.5313             0.3235              1.6426
+ pop_recent        SUB     2            0.4739             0.2885              1.6426
+ pop_recent        SUB     3            0.1765             0.1075              1.6426
+ pop_recent        SUB     4            0.2522             0.1535              1.6426
+ pop_recent        SUB     5            0.2087             0.1271              1.6426
+PF_softfrac        ALL     1            0.6546             0.3452              1.8963
+PF_softfrac        ALL     2            0.4891             0.2579              1.8963
+PF_softfrac        ALL     3            0.3241             0.1709              1.8963
+PF_softfrac        ALL     4            0.2471             0.1303              1.8963
+PF_softfrac        ALL     5            0.1814             0.0957              1.8963
+PF_softfrac        SUB     1            0.6965             0.3332              2.0904
+PF_softfrac        SUB     2            0.5452             0.2608              2.0904
+PF_softfrac        SUB     3            0.3791             0.1814              2.0904
+PF_softfrac        SUB     4            0.2704             0.1294              2.0904
+PF_softfrac        SUB     5            0.1991             0.0953              2.0904
+Hand-computed AP@5 check, personal baseline PF_softfrac (validation split)
+user_id = 57357915868236403 (SUB user)
+recommended (rank: id title [category] -> hit?):
+  1: 240081 Факты. [Инфо] -> HIT
+  2: 2400480 ТСН. [Инфо] -> HIT
+  3: 200344 'Чистоnews'. [Развлечения] -> miss
+  4: 6200371 ДжеДАИ. [Познавательное] -> HIT
+  5: 6700482 Секретные материалы. [Другое] -> miss
+truth (5 ids, order irrelevant): 240081 Факты., 2400480 ТСН., 90080895 Х/ф 'Один в поле воин', 1 и 2 с., 6200371 ДжеДАИ., 90075647 Х/ф 'Мой путь'.
+  rank 1: hit #1 -> P@1 = 1/1 = 1.000000
+  rank 2: hit #2 -> P@2 = 2/2 = 1.000000
+  rank 3: miss -> contributes 0
+  rank 4: hit #3 -> P@4 = 3/4 = 0.750000
+  rank 5: miss -> contributes 0
+  AP@5 = (1/1 + 2/2 + 3/4) / min(5, |truth|=5) = 2.750000 / 5 = 0.550000
+  ap_at_k(...) = 0.550000 -> MATCH
+example light: user 385172162373391221, 17 distinct qualifying training shows; truth in history (any watch) 4/5, (qualifying) 3/5; AP pop_recent=0.6000, PF_softfrac=0.3533
+example heavy: user 5672174985970291620, 55 distinct qualifying training shows; truth in history (any watch) 4/5, (qualifying) 4/5; AP pop_recent=0.4833, PF_softfrac=0.5500
+TEST split: {'pool_size': 6642, 'pool_size_literal_schedule_31_42_only': 6636, 'train_rows': 3014110, 'users': 1260, 'sub_users': 1260}
+validating sub01_popularity:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+  [OK] exact header; wrote sub01_popularity.csv; first 3 rows:
+    8377619604347126107,2400480 240081 2400508 2400467 20088
+    8381667675275833309,2400480 240081 2400508 2400467 20088
+    8387147770138767246,2400480 240081 2400508 2400467 20088
+validating sub02_personal_baseline:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+  [OK] exact header; wrote sub02_personal_baseline.csv; first 3 rows:
+    8377619604347126107,2400480 20088 240081 2400508 200337
+    8381667675275833309,2400480 240081 12001682 6700482 200344
+    8387147770138767246,12001682 12002856 12001732 12002355 12001734
+test PF padding: {'users_with_any_padding': 3, 'users_fully_padded': 2, 'mean_padded': 0.00873015873015873, 'users_without_qualifying_training_show': 4}
+{
+  "val_split": {
+    "pool_size": 6376,
+    "pool_size_literal_schedule_21_30_only_from_W21": 6363,
+    "train_rows": 1824077,
+    "users": 4030,
+    "sub_users": 1150
+  },
+  "chosen_pop": "pop_recent",
+  "chosen_pf": "PF_softfrac",
+  "example_light": {
+    "user_id": "385172162373391221",
+    "train_shows": 17,
+    "truth_in_hist_any": 4,
+    "truth_in_hist_q": 3
+  },
+  "example_heavy": {
+    "user_id": "5672174985970291620",
+    "train_shows": 55,
+    "truth_in_hist_any": 4,
+    "truth_in_hist_q": 4
+  },
+  "test_split": {
+    "pool_size": 6642,
+    "pool_size_literal_schedule_31_42_only": 6636,
+    "train_rows": 3014110,
+    "users": 1260,
+    "sub_users": 1260
+  },
+  "test_pf": {
+    "users_with_any_padding": 3,
+    "users_fully_padded": 2,
+    "mean_padded": 0.00873015873015873,
+    "users_without_qualifying_training_show": 4
+  },
+  "runtime_seconds": 108.1,
+  "peak_memory_mb": 1235
+}

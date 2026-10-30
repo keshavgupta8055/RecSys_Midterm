@@ -1,0 +1,2 @@
+# keep every file byte-identical (recorded sha256 hashes, Kaggle submission files)
+* -text

@@ -1,0 +1,277 @@
+[B4] val graph training airing_start min 2020-03-09 01:16:00 max 2020-05-17 23:55:00
+baselines reproduce Step 3 exactly: {'pop_recent': (0.2398, 0.2656), 'PF_softfrac': (0.3237, 0.36)}
+[A6] grid: 3 edges x 4 d x 2 seed weights x 2 beta (PPR in float32; beta reuses R)
+  raw              softfrac d=0.3   beta=0    ALL 0.3241 SUB 0.3603 iters 5 17.07s
+  raw              softfrac d=0.3   beta=0.5  ALL 0.3239 SUB 0.3601 iters 5 15.76s
+  raw              softfrac d=0.5   beta=0    ALL 0.3245 SUB 0.3607 iters 6 12.62s
+  raw              softfrac d=0.5   beta=0.5  ALL 0.3244 SUB 0.3606 iters 6 11.99s
+  raw              softfrac d=0.7   beta=0    ALL 0.3252 SUB 0.3622 iters 7 10.27s
+  raw              softfrac d=0.7   beta=0.5  ALL 0.3250 SUB 0.3620 iters 7 10.11s
+  raw              softfrac d=0.85  beta=0    ALL 0.3252 SUB 0.3631 iters 7 9.73s
+  raw              softfrac d=0.85  beta=0.5  ALL 0.3256 SUB 0.3640 iters 7 9.94s
+  raw              count08  d=0.3   beta=0    ALL 0.3167 SUB 0.3543 iters 7 8.08s
+  raw              count08  d=0.3   beta=0.5  ALL 0.2935 SUB 0.3298 iters 7 8.87s
+  raw              count08  d=0.5   beta=0    ALL 0.3178 SUB 0.3551 iters 8 15.25s
+  raw              count08  d=0.5   beta=0.5  ALL 0.2998 SUB 0.3365 iters 8 16.11s
+  raw              count08  d=0.7   beta=0    ALL 0.3194 SUB 0.3540 iters 10 16.7s
+  raw              count08  d=0.7   beta=0.5  ALL 0.3078 SUB 0.3427 iters 10 17.81s
+  raw              count08  d=0.85  beta=0    ALL 0.3099 SUB 0.3440 iters 11 19.15s
+  raw              count08  d=0.85  beta=0.5  ALL 0.3088 SUB 0.3432 iters 11 19.1s
+  cosine           softfrac d=0.3   beta=0    ALL 0.3238 SUB 0.3601 iters 6 15.94s
+  cosine           softfrac d=0.3   beta=0.5  ALL 0.3232 SUB 0.3593 iters 6 16.41s
+  cosine           softfrac d=0.5   beta=0    ALL 0.3239 SUB 0.3601 iters 7 17.83s
+  cosine           softfrac d=0.5   beta=0.5  ALL 0.3233 SUB 0.3593 iters 7 17.76s
+  cosine           softfrac d=0.7   beta=0    ALL 0.3240 SUB 0.3598 iters 8 16.51s
+  cosine           softfrac d=0.7   beta=0.5  ALL 0.3236 SUB 0.3600 iters 8 17.31s
+  cosine           softfrac d=0.85  beta=0    ALL 0.3240 SUB 0.3599 iters 11 22.12s
+  cosine           softfrac d=0.85  beta=0.5  ALL 0.3240 SUB 0.3600 iters 11 22.04s
+  cosine           count08  d=0.3   beta=0    ALL 0.3163 SUB 0.3536 iters 8 17.23s
+  cosine           count08  d=0.3   beta=0.5  ALL 0.2877 SUB 0.3233 iters 8 17.26s
+  cosine           count08  d=0.5   beta=0    ALL 0.3166 SUB 0.3540 iters 10 21.83s
+  cosine           count08  d=0.5   beta=0.5  ALL 0.2880 SUB 0.3236 iters 10 22.27s
+  cosine           count08  d=0.7   beta=0    ALL 0.3165 SUB 0.3536 iters 14 25.55s
+  cosine           count08  d=0.7   beta=0.5  ALL 0.2889 SUB 0.3253 iters 14 26.52s
+  cosine           count08  d=0.85  beta=0    ALL 0.3165 SUB 0.3540 iters 20 31.92s
+  cosine           count08  d=0.85  beta=0.5  ALL 0.2921 SUB 0.3293 iters 20 32.32s
+  weighted_cosine  softfrac d=0.3   beta=0    ALL 0.3238 SUB 0.3600 iters 7 20.22s
+  weighted_cosine  softfrac d=0.3   beta=0.5  ALL 0.3234 SUB 0.3597 iters 7 21.56s
+  weighted_cosine  softfrac d=0.5   beta=0    ALL 0.3239 SUB 0.3599 iters 8 16.52s
+  weighted_cosine  softfrac d=0.5   beta=0.5  ALL 0.3236 SUB 0.3601 iters 8 17.73s
+  weighted_cosine  softfrac d=0.7   beta=0    ALL 0.3242 SUB 0.3602 iters 10 21.83s
+  weighted_cosine  softfrac d=0.7   beta=0.5  ALL 0.3240 SUB 0.3599 iters 10 23.27s
+  weighted_cosine  softfrac d=0.85  beta=0    ALL 0.3251 SUB 0.3618 iters 12 25.05s
+  weighted_cosine  softfrac d=0.85  beta=0.5  ALL 0.3246 SUB 0.3609 iters 12 25.06s
+  weighted_cosine  count08  d=0.3   beta=0    ALL 0.3136 SUB 0.3514 iters 8 16.41s
+  weighted_cosine  count08  d=0.3   beta=0.5  ALL 0.2873 SUB 0.3229 iters 8 16.79s
+  weighted_cosine  count08  d=0.5   beta=0    ALL 0.3144 SUB 0.3518 iters 12 19.67s
+  weighted_cosine  count08  d=0.5   beta=0.5  ALL 0.2875 SUB 0.3233 iters 12 19.59s
+  weighted_cosine  count08  d=0.7   beta=0    ALL 0.3149 SUB 0.3522 iters 16 24.19s
+  weighted_cosine  count08  d=0.7   beta=0.5  ALL 0.2877 SUB 0.3239 iters 16 23.7s
+  weighted_cosine  count08  d=0.85  beta=0    ALL 0.3150 SUB 0.3530 iters 23 29.47s
+  weighted_cosine  count08  d=0.85  beta=0.5  ALL 0.2897 SUB 0.3260 iters 23 29.2s
+[A6] selected (best mean of ALL and SUB MAP@5; tie -> faster -> simpler): {'edge': 'raw', 'seed_weight': 'softfrac', 'd': 0.85, 'beta': 0.5} {'map5_ALL': 0.325645988420182, 'map5_SUB': 0.36395652173913046}
+[C1] selected PPR float64: {'ALL': 0.3256, 'SUB': 0.364} iterations [7, 7, 7, 7, 7] converged True
+[B3] {'T_row_sum_min': 0.9999999999999575, 'T_row_sum_max': 1.0000000000000397, 'isolated_nodes_selfloop': 0, 'R_row_sum_min': 0.9999999999999996, 'R_row_sum_max': 1.0000000000000004, 'd0.01_top5_equals_PF_softfrac_share': 0.9704714640198511, 'd0.01_share_among_users_with_ge5_pool_seeds': 0.9724241664577589}
+[B2] naive pure-Python PPR for 10 users ...
+    {'user_id': '1697310425691724323', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 1.8735013540549517e-16, 'max_abs_diff_vs_main_run': 1.8735013540549517e-16, 'top5_naive': '12002896 12002955 10001336 2400467 700389', 'top5_vectorised': '12002896 12002955 10001336 2400467 700389', 'top5_identical': True, 'seconds': 19.8}
+    {'user_id': '14332472211201096490', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 7.979727989493313e-17, 'max_abs_diff_vs_main_run': 8.326672684688674e-17, 'top5_naive': '2400480 2400508 2400467 240081 200344', 'top5_vectorised': '2400480 2400508 2400467 240081 200344', 'top5_identical': True, 'seconds': 21.4}
+    {'user_id': '1745774042235726742', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 6.245004513516506e-17, 'max_abs_diff_vs_main_run': 6.245004513516506e-17, 'top5_naive': '2400480 240081 20088 2400467 10002451', 'top5_vectorised': '2400480 240081 20088 2400467 10002451', 'top5_identical': True, 'seconds': 19.5}
+    {'user_id': '11971046114677874454', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 4.683753385137379e-17, 'max_abs_diff_vs_main_run': 4.85722573273506e-17, 'top5_naive': '240081 12001682 2500413 2400480 6500479', 'top5_vectorised': '240081 12001682 2500413 2400480 6500479', 'top5_identical': True, 'seconds': 20.0}
+    {'user_id': '8149181471871358775', 'naive_iterations': 6, 'max_abs_diff_same_iterations': 5.898059818321144e-17, 'max_abs_diff_vs_main_run': 1.886774412922232e-10, 'top5_naive': '2400480 240081 20088 2400508 2400467', 'top5_vectorised': '2400480 240081 20088 2400508 2400467', 'top5_identical': True, 'seconds': 18.9}
+    {'user_id': '8049202631616302489', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 9.020562075079397e-17, 'max_abs_diff_vs_main_run': 9.020562075079397e-17, 'top5_naive': '240081 10002744 2400508 10003014 2400480', 'top5_vectorised': '240081 10002744 2400508 10003014 2400480', 'top5_identical': True, 'seconds': 20.3}
+    {'user_id': '12806242628727821422', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 2.0816681711721685e-16, 'max_abs_diff_vs_main_run': 2.0816681711721685e-16, 'top5_naive': '240081 2400480 500346 500359 10002514', 'top5_vectorised': '240081 2400480 500346 500359 10002514', 'top5_identical': True, 'seconds': 20.6}
+    {'user_id': '1830949069446941494', 'naive_iterations': 6, 'max_abs_diff_same_iterations': 6.765421556309548e-17, 'max_abs_diff_vs_main_run': 2.164212216555772e-10, 'top5_naive': '2400480 240081 2400508 10002514 2400467', 'top5_vectorised': '2400480 240081 2400508 10002514 2400467', 'top5_identical': True, 'seconds': 18.8}
+    {'user_id': '3896211261913020547', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 1.1796119636642288e-16, 'max_abs_diff_vs_main_run': 1.1796119636642288e-16, 'top5_naive': '240081 2400508 1100411 2400480 700389', 'top5_vectorised': '240081 2400508 1100411 2400480 700389', 'top5_identical': True, 'seconds': 21.1}
+    {'user_id': '15831957468039185159', 'naive_iterations': 7, 'max_abs_diff_same_iterations': 8.673617379884035e-17, 'max_abs_diff_vs_main_run': 8.673617379884035e-17, 'top5_naive': '12001682 12002856 2400480 12001734 12002355', 'top5_vectorised': '12001682 12002856 2400480 12001734 12002355', 'top5_identical': True, 'seconds': 21.2}
+[B5] {'hash_run1': '03b4a49cf4cd86fe7238c9135625dcfc7c80fc91816df8be0a4268c79c193ab6', 'hash_run2': '03b4a49cf4cd86fe7238c9135625dcfc7c80fc91816df8be0a4268c79c193ab6', 'identical': True}
+population      method   map5  ci_lo  ci_hi      n        comparison  mean_diff  diff_ci_lo  diff_ci_hi
+       ALL  pop_recent 0.2398 0.2328 0.2466 4030.0                          NaN         NaN         NaN
+       ALL PF_softfrac 0.3237 0.3168 0.3311 4030.0                          NaN         NaN         NaN
+       ALL         PPR 0.3256 0.3188 0.3331 4030.0                          NaN         NaN         NaN
+       ALL                NaN    NaN    NaN    NaN PPR - PF_softfrac     0.0020      0.0006      0.0032
+       ALL                NaN    NaN    NaN    NaN  PPR - pop_recent     0.0858      0.0793      0.0918
+       SUB  pop_recent 0.2656 0.2528 0.2799 1150.0                          NaN         NaN         NaN
+       SUB PF_softfrac 0.3600 0.3457 0.3738 1150.0                          NaN         NaN         NaN
+       SUB         PPR 0.3640 0.3502 0.3781 1150.0                          NaN         NaN         NaN
+       SUB                NaN    NaN    NaN    NaN PPR - PF_softfrac     0.0040      0.0011      0.0067
+       SUB                NaN    NaN    NaN    NaN  PPR - pop_recent     0.0984      0.0868      0.1101
+     method population slot  share_familiar  precision_familiar  precision_new  share_of_hits_new  mean_new_items_per_list
+ pop_recent        ALL  all          0.8463              0.3430         0.0607             0.0311                   0.7687
+ pop_recent        SUB  all          0.8903              0.3612         0.0634             0.0212                   0.5487
+PF_softfrac        ALL  all          0.9912              0.3805         0.2416             0.0056                   0.0442
+PF_softfrac        SUB  all          0.9932              0.4199         0.1538             0.0025                   0.0339
+        PPR        ALL  all          0.9909              0.3823         0.2350             0.0056                   0.0454
+        PPR        SUB  all          0.9932              0.4225         0.1538             0.0025                   0.0339
+                                          method population  users_with_truth_new  map5_vs_truth_new   ci_lo   ci_hi  recall5_vs_truth_new  recall_ci_lo  recall_ci_hi
+                                    PPR_new_only        ALL                2918.0             0.0284  0.0244  0.0324                0.0456        0.0396        0.0516
+                                    PPR_new_only        SUB                 766.0             0.0274  0.0196  0.0357                0.0460        0.0342        0.0583
+                             pop_recent_new_only        ALL                2918.0             0.0447  0.0397  0.0501                0.0720        0.0645        0.0793
+                             pop_recent_new_only        SUB                 766.0             0.0444  0.0341  0.0558                0.0757        0.0600        0.0917
+PPR_new_only - pop_recent_new_only (MAP, paired)        ALL                   NaN            -0.0162 -0.0210 -0.0122                   NaN           NaN           NaN
+PPR_new_only - pop_recent_new_only (MAP, paired)        SUB                   NaN            -0.0170 -0.0260 -0.0082                   NaN           NaN           NaN
+                   truth_window      method population  users   map5  ci_lo  ci_hi
+              main: weeks 21-30  pop_recent        ALL   4030 0.2398 0.2328 0.2466
+              main: weeks 21-30  pop_recent        SUB   1150 0.2656 0.2528 0.2799
+              main: weeks 21-30 PF_softfrac        ALL   4030 0.3237 0.3168 0.3311
+              main: weeks 21-30 PF_softfrac        SUB   1150 0.3600 0.3457 0.3738
+              main: weeks 21-30         PPR        ALL   4030 0.3256 0.3188 0.3331
+              main: weeks 21-30         PPR        SUB   1150 0.3640 0.3502 0.3781
+clean: 21-24 + 28-30 (no 25-27)  pop_recent        ALL   3925 0.2307 0.2239 0.2373
+clean: 21-24 + 28-30 (no 25-27)  pop_recent        SUB   1128 0.2545 0.2412 0.2680
+clean: 21-24 + 28-30 (no 25-27) PF_softfrac        ALL   3925 0.3148 0.3069 0.3219
+clean: 21-24 + 28-30 (no 25-27) PF_softfrac        SUB   1128 0.3486 0.3354 0.3630
+clean: 21-24 + 28-30 (no 25-27)         PPR        ALL   3925 0.3165 0.3090 0.3238
+clean: 21-24 + 28-30 (no 25-27)         PPR        SUB   1128 0.3522 0.3391 0.3663
+                    weeks 21-25  pop_recent        ALL   2558 0.2253 0.2169 0.2333
+                    weeks 21-25  pop_recent        SUB    775 0.2346 0.2203 0.2493
+                    weeks 21-25 PF_softfrac        ALL   2558 0.3234 0.3142 0.3324
+                    weeks 21-25 PF_softfrac        SUB    775 0.3507 0.3335 0.3671
+                    weeks 21-25         PPR        ALL   2558 0.3230 0.3139 0.3320
+                    weeks 21-25         PPR        SUB    775 0.3528 0.3354 0.3698
+                    weeks 26-30  pop_recent        ALL   3663 0.1974 0.1908 0.2038
+                    weeks 26-30  pop_recent        SUB   1078 0.2185 0.2061 0.2309
+                    weeks 26-30 PF_softfrac        ALL   3663 0.2676 0.2603 0.2754
+                    weeks 26-30 PF_softfrac        SUB   1078 0.2958 0.2818 0.3095
+                    weeks 26-30         PPR        ALL   3663 0.2692 0.2621 0.2772
+                    weeks 26-30         PPR        SUB   1078 0.2984 0.2847 0.3120
+     method  distinct_shows_recommended  pool_size  catalogue_coverage  share_lists_ge3_categories  mean_pairwise_category_diversity
+ pop_recent                           5       6376              0.0008                      0.0000                            0.4000
+PF_softfrac                         675       6376              0.1059                      0.6347                            0.6666
+        PPR                         513       6376              0.0805                      0.6295                            0.6667
+[B4] test graph training airing_start min 2020-03-09 01:16:00 max 2020-07-26 23:55:00
+validating sub03_ppr:
+  [OK] 1,260 rows
+  [OK] same users and order as template
+  [OK] each row exactly 5 distinct integers
+  [OK] no zeros
+  [OK] all ids in test pool
+  [OK] exact header; wrote sub03_ppr.csv; first 3 rows:
+    8377619604347126107,2400480 20088 240081 2400508 200337
+    8381667675275833309,2400480 240081 12001682 6700482 200344
+    8387147770138767246,12001682 12002856 12001732 12002355 12001734
+[E] {'nodes': 4363, 'undirected_edges': 7977182, 'isolated_nodes': 0, 'iterations': [7, 8], 'users_padded': 2, 'users_no_seed': 2, 'mean_padded': 0.007936507936507936}
+
+[D] light user 385172162373391221: decomposition check max|sum(parts) - total| = 3.47e-18
+  overlap PPR top-5 vs PF_softfrac top-5: 5
+
+[D] heavy user 5672174985970291620: decomposition check max|sum(parts) - total| = 3.47e-18
+  overlap PPR top-5 vs PF_softfrac top-5: 4
+ role         list  rank  tv_show_id                                                     title       category   hit  in_training_history  training_qualifying_count  ppr_score                                           seed1  seed1_share             seed2  seed2_share                                           seed3  seed3_share
+light     PPR_full     1     2400480                                                      ТСН.           Инфо  True                 True                          9   0.000489                                    2400480 ТСН.       0.8954 (all other seeds)       0.0421 10003159 Т/с 'Ничто не случается дважды', 10 с.       0.0197
+light     PPR_full     2    10003159                    Т/с 'Ничто не случается дважды', 10 с.        Сериалы False                 True                         21   0.000476 10003159 Т/с 'Ничто не случается дважды', 10 с.       0.9255 (all other seeds)       0.0302                                    2400480 ТСН.       0.0140
+light     PPR_full     3      240081                                                    Факты.           Инфо  True                 True                          7   0.000444                                   240081 Факты.       0.8844 (all other seeds)       0.0456                                    2400480 ТСН.       0.0216
+light     PPR_full     4     2400508                                                  Сегодня.           Инфо False                 True                          2   0.000214                                2400508 Сегодня.       0.7476 (all other seeds)       0.0907                                    2400480 ТСН.       0.0428
+light     PPR_full     5     2400467                                          'Викна-Новости'.           Инфо  True                 True                          1   0.000208                        2400467 'Викна-Новости'.       0.7470 (all other seeds)       0.0907 10003159 Т/с 'Ничто не случается дважды', 10 с.       0.0429
+light PPR_new_only     1      200506                                            Звездный путь.    Развлечения False                False                          0   0.000045                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light PPR_new_only     2      700369                                             'Ліга сміху'.    Развлечения False                False                          0   0.000045                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light PPR_new_only     3      400357                        'Холостяк', 10 сезон, 10 эп., 1 ч.    Развлечения False                False                          0   0.000042                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light PPR_new_only     4     6000483                         'Свадьба вслепую', 6 сезон, 7 эп.    Развлечения False                False                          0   0.000041                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light PPR_new_only     5      400363                    От пацанки до панянки, 4 сезон, 10 эп.    Развлечения False                False                          0   0.000040                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light  PF_softfrac     1    10003159                    Т/с 'Ничто не случается дважды', 10 с.        Сериалы False                 True                         21        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light  PF_softfrac     2     2400480                                                      ТСН.           Инфо  True                 True                          9        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light  PF_softfrac     3      240081                                                    Факты.           Инфо  True                 True                          7        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light  PF_softfrac     4     2400508                                                  Сегодня.           Инфо False                 True                          2        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light  PF_softfrac     5     2400467                                          'Викна-Новости'.           Инфо  True                 True                          1        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light   pop_recent     1     2400480                                                      ТСН.           Инфо  True                 True                          9        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light   pop_recent     2      240081                                                    Факты.           Инфо  True                 True                          7        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light   pop_recent     3     2400467                                          'Викна-Новости'.           Инфо  True                 True                          1        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light   pop_recent     4     2400508                                                  Сегодня.           Инфо False                 True                          2        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+light   pop_recent     5       20088 'Завтрак с 1+1'. Информационно-развлекательная программа.    Развлечения False                 True                          0        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy     PPR_full     1     2400480                                                      ТСН.           Инфо  True                 True                         18   0.000358                                    2400480 ТСН.       0.8476 (all other seeds)       0.0931                        2400467 'Викна-Новости'.       0.0137
+heavy     PPR_full     2     2400467                                          'Викна-Новости'.           Инфо  True                 True                         15   0.000273                        2400467 'Викна-Новости'.       0.8107 (all other seeds)       0.1120                                    2400480 ТСН.       0.0226
+heavy     PPR_full     3     6500479                                          'Мир наизнанку'. Познавательное False                 True                          9   0.000213                        6500479 'Мир наизнанку'.       0.7467 (all other seeds)       0.1463                                    2400480 ТСН.       0.0296
+heavy     PPR_full     4     2400508                                                  Сегодня.           Инфо  True                 True                          7   0.000171                                2400508 Сегодня.       0.6767 (all other seeds)       0.1837                                    2400480 ТСН.       0.0371
+heavy     PPR_full     5      240081                                                    Факты.           Инфо False                 True                          4   0.000136                                   240081 Факты.       0.5684 (all other seeds)       0.2415                                    2400480 ТСН.       0.0491
+heavy PPR_new_only     1      200337                                           Утро с Интером.    Развлечения False                False                          0   0.000043                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy PPR_new_only     2     6200371                                                   ДжеДАИ. Познавательное False                False                          0   0.000043                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy PPR_new_only     3    12001682                         М/с 'Губка Боб Квадратные Штаны'.          Детям False                False                          0   0.000037                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy PPR_new_only     4      300358                            Скетч-шоу 'На троих', 4 сезон.    Развлечения False                False                          0   0.000034                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy PPR_new_only     5    90077687                                 Х/ф 'Великий уравнитель'.         Фильмы False                False                          0   0.000027                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy  PF_softfrac     1     2400480                                                      ТСН.           Инфо  True                 True                         18        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy  PF_softfrac     2     2400467                                          'Викна-Новости'.           Инфо  True                 True                         15        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy  PF_softfrac     3     6500479                                          'Мир наизнанку'. Познавательное False                 True                          9        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy  PF_softfrac     4     2400508                                                  Сегодня.           Инфо  True                 True                          7        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy  PF_softfrac     5      500331                                           'Один за всех'.    Развлечения False                 True                          5        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy   pop_recent     1     2400480                                                      ТСН.           Инфо  True                 True                         18        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy   pop_recent     2      240081                                                    Факты.           Инфо False                 True                          4        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy   pop_recent     3     2400467                                          'Викна-Новости'.           Инфо  True                 True                         15        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy   pop_recent     4     2400508                                                  Сегодня.           Инфо  True                 True                          7        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+heavy   pop_recent     5       20088 'Завтрак с 1+1'. Информационно-развлекательная программа.    Развлечения False                 True                          2        NaN                                             NaN          NaN               NaN          NaN                                             NaN          NaN
+split  nodes  undirected_edges  users_scored  graph_build_seconds  ppr_seconds_all_users  ppr_iterations  peak_memory_mb_whole_step
+  val   2973           3624267          4030                 3.52                  18.81               7                       1228
+ test   4363           7977182          1260                 7.97                  10.01               8                       1228
+{
+  "leakage_val": {
+    "min": "2020-03-09 01:16:00",
+    "max": "2020-05-17 23:55:00"
+  },
+  "selected": {
+    "edge": "raw",
+    "seed_weight": "softfrac",
+    "d": 0.85,
+    "beta": 0.5
+  },
+  "selected_grid_float32": {
+    "map5_ALL": 0.325645988420182,
+    "map5_SUB": 0.36395652173913046
+  },
+  "grid_seconds": 523.6,
+  "ppr_val": {
+    "ALL": {
+      "map5": 0.325645988420182,
+      "ci_lo": 0.3187784739454094,
+      "ci_hi": 0.3330802522746071,
+      "n": 4030
+    },
+    "SUB": {
+      "map5": 0.36395652173913046,
+      "ci_lo": 0.35022333333333333,
+      "ci_hi": 0.3781189130434783,
+      "n": 1150
+    }
+  },
+  "ppr_val_iterations": [
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "ppr_val_mean_padded_ALL": 0.03598014888337469,
+  "graph_val": {
+    "nodes": 2973,
+    "undirected_edges": 3624267,
+    "density": 0.8203637583473332,
+    "isolated_nodes": 0,
+    "seed_users": 4841,
+    "degree_summary": {
+      "count": 2973.0,
+      "mean": 2438.1,
+      "std": 596.3,
+      "min": 7.0,
+      "10%": 1695.2,
+      "50%": 2661.0,
+      "90%": 2847.0,
+      "max": 2969.0
+    }
+  },
+  "sanity": {
+    "T_row_sum_min": 0.9999999999999575,
+    "T_row_sum_max": 1.0000000000000397,
+    "isolated_nodes_selfloop": 0,
+    "R_row_sum_min": 0.9999999999999996,
+    "R_row_sum_max": 1.0000000000000004,
+    "d0.01_top5_equals_PF_softfrac_share": 0.9704714640198511,
+    "d0.01_share_among_users_with_ge5_pool_seeds": 0.9724241664577589
+  },
+  "naive_check": {
+    "users": 10,
+    "max_abs_diff": 2.0816681711721685e-16,
+    "all_top5_identical": true
+  },
+  "determinism": {
+    "hash_run1": "03b4a49cf4cd86fe7238c9135625dcfc7c80fc91816df8be0a4268c79c193ab6",
+    "hash_run2": "03b4a49cf4cd86fe7238c9135625dcfc7c80fc91816df8be0a4268c79c193ab6",
+    "identical": true
+  },
+  "leakage_test": {
+    "min": "2020-03-09 01:16:00",
+    "max": "2020-07-26 23:55:00"
+  },
+  "test": {
+    "nodes": 4363,
+    "undirected_edges": 7977182,
+    "isolated_nodes": 0,
+    "iterations": [
+      7,
+      8
+    ],
+    "users_padded": 2,
+    "users_no_seed": 2,
+    "mean_padded": 0.007936507936507936
+  },
+  "example_light_overlap_ppr_pf": 5,
+  "example_heavy_overlap_ppr_pf": 4,
+  "runtime_seconds": 864.1,
+  "peak_memory_mb": 1228
+}

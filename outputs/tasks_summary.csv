@@ -1,0 +1,4 @@
+task,users,sub_users,pool_size,history_rows,history_start,history_end_excl,history_weeks,target_start,target_end_excl,target_weeks,truth_pairs,share_truth_pairs_in_history
+inner,3785,1086,4402,925145,2020-03-09,2020-04-13,5.0,2020-04-13,2020-05-18,5.0,18925,0.6330779392338177
+val,4030,1150,6376,1824077,2020-03-09,2020-05-18,10.0,2020-05-18,2020-07-27,10.0,20150,0.6531513647642679
+test,1260,1260,6642,3014110,2020-03-09,2020-07-27,20.0,2020-07-27,2020-10-19,12.0,0,

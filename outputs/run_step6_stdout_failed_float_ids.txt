@@ -1,0 +1,554 @@
+ task  users  sub_users  pool_size  history_rows history_start history_end_excl  history_weeks target_start target_end_excl  target_weeks  truth_pairs  share_truth_pairs_in_history
+inner   3785       1086       4402        925145    2020-03-09       2020-04-13            5.0   2020-04-13      2020-05-18           5.0        18925                      0.633078
+  val   4030       1150       6376       1824077    2020-03-09       2020-05-18           10.0   2020-05-18      2020-07-27          10.0        20150                      0.653151
+ test   1260       1260       6642       3014110    2020-03-09       2020-07-27           20.0   2020-07-27      2020-10-19          12.0            0                           NaN
+[C] building candidates + features for inner ...
+    {'task': 'inner', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 85.2, 'history_exposure_seconds': 26.9, 'ppr_seconds': 13.5, 'cbf_seconds': 15.4, 'candidates_seconds': 3.4, 'features_seconds': 26.0, 'peak_memory_mb_so_far': 875}
+[C] building candidates + features for val ...
+    {'task': 'val', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 183.8, 'history_exposure_seconds': 49.8, 'ppr_seconds': 65.3, 'cbf_seconds': 30.7, 'candidates_seconds': 4.5, 'features_seconds': 33.4, 'peak_memory_mb_so_far': 1141}
+[C] building candidates + features for test ...
+    {'task': 'test', 'stage': 'feature build (all sources + candidates + features)', 'seconds': 142.3, 'history_exposure_seconds': 60.9, 'ppr_seconds': 39.7, 'cbf_seconds': 17.2, 'candidates_seconds': 1.7, 'features_seconds': 22.7, 'peak_memory_mb_so_far': 1141}
+[A] Steps 3-5 reproduced exactly: {'pop_recent': 0.2398, 'PF_softfrac': 0.3237, 'M0_PF_exposure': 0.3406, 'PPR': 0.3256, 'cbf_pop': 0.2783, 'cbf_pure': 0.1815}
+ task  users   rows  mean_candidates  median_candidates  max_candidates  min_candidates  candidate_recall_truth_pairs  history_ceiling_any_watch
+inner   3785 253851          67.0676               66.0             107              20                        0.6587                     0.6331
+  val   4030 280268          69.5454               69.0             102              20                        0.6559                     0.6532
+ test   1260  92096          73.0921               71.0             105              20                           NaN                        NaN
+ task source  k  truth_pairs_in_source  truth_pairs_found_only_by_source  share_of_truth_pairs_only_by_source
+inner     pf 30                  11225                                 4                               0.0002
+inner    pfx 30                  11416                                95                               0.0050
+inner    ppr 20                  10787                                42                               0.0022
+inner cbfpop 30                   9568                                95                               0.0050
+inner    cbf 30                   7473                                37                               0.0020
+inner    pop 20                   8785                               321                               0.0170
+  val     pf 30                  11561                                10                               0.0005
+  val    pfx 30                  11959                               195                               0.0097
+  val    ppr 20                  11239                                44                               0.0022
+  val cbfpop 30                   9700                                99                               0.0049
+  val    cbf 30                   7303                                43                               0.0021
+  val    pop 20                   9263                               508                               0.0252
+             user_id  tv_show_id  new_show  ex_zero_us  features_compared  max_abs_diff
+11991278120371551072    10002451     False        True                 31  0.000000e+00
+11991278120371551072      200337      True        True                 31  0.000000e+00
+11991278120371551072      200456      True        True                 31  0.000000e+00
+11991278120371551072     6600437      True        True                 31  0.000000e+00
+11991278120371551072    12001734      True        True                 31  0.000000e+00
+14349040942184232238    10003159     False        True                 31  0.000000e+00
+14349040942184232238      200469      True        True                 31  0.000000e+00
+14349040942184232238      200432     False       False                 31  0.000000e+00
+14349040942184232238     6200371     False       False                 31  0.000000e+00
+14349040942184232238    10002514     False       False                 31  0.000000e+00
+ 8051478594206597347    90014056     False        True                 31  0.000000e+00
+ 8051478594206597347      200337      True        True                 31  0.000000e+00
+ 8051478594206597347      200405      True        True                 31  0.000000e+00
+ 8051478594206597347     6600437      True        True                 31  0.000000e+00
+ 8051478594206597347    10002515      True        True                 31  0.000000e+00
+15848011677771361594    12002201     False        True                 31  0.000000e+00
+15848011677771361594      200337      True        True                 31  0.000000e+00
+15848011677771361594      500281     False       False                 31  0.000000e+00
+15848011677771361594    12002896      True        True                 31  0.000000e+00
+15848011677771361594    90074341      True        True                 31  0.000000e+00
+ 8152220956056607861    10002451     False        True                 31  0.000000e+00
+ 8152220956056607861      200337      True        True                 31  0.000000e+00
+ 8152220956056607861      400357     False       False                 31  1.776357e-15
+ 8152220956056607861    90072485     False       False                 31  0.000000e+00
+ 8152220956056607861    90076806     False       False                 31  0.000000e+00
+ 1749475349157220203    10002451     False        True                 31  3.552714e-15
+ 1749475349157220203      200505      True        True                 31  0.000000e+00
+ 1749475349157220203      200432     False       False                 31  8.881784e-16
+ 1749475349157220203     5900348     False       False                 31  8.673617e-19
+ 1749475349157220203     6700435     False       False                 31  2.710505e-20
+Hand-worked features: val task, user 8152220956056607861, show 400357 ('Холостяк', 10 сезон, 10 эп., 1 ч.); history 2020-03-09 .. 2020-05-18 (exclusive, 10 weeks), target 2020-05-18 .. 2020-07-27 (10 weeks)
+raw interaction rows (airing_start, channel, airing_duration, watched_seconds, frac, iso_week):
+  2020-03-13 18:00:00  ch 6  dur 3600  watched 3598  frac 0.999444  week 11  (qualifying)
+  2020-03-13 19:00:00  ch 6  dur 10800  watched 1297  frac 0.120093  week 11
+  2020-03-20 15:30:00  ch 6  dur 7200  watched 4581  frac 0.636250  week 12
+  2020-03-27 19:00:00  ch 6  dur 10800  watched 2712  frac 0.251111  week 13
+  2020-04-03 15:25:00  ch 6  dur 7500  watched 6911  frac 0.921467  week 14  (qualifying)
+  2020-04-03 18:00:00  ch 6  dur 3600  watched 3333  frac 0.925833  week 14  (qualifying)
+  2020-04-03 19:00:00  ch 6  dur 10800  watched 3644  frac 0.337407  week 14
+  2020-04-10 15:25:00  ch 6  dur 7500  watched 4654  frac 0.620533  week 15
+  2020-04-17 15:35:00  ch 6  dur 6900  watched 758  frac 0.109855  week 16
+  2020-04-17 22:45:00  ch 6  dur 1200  watched 1200  frac 1.000000  week 16  (qualifying)
+  2020-04-24 19:00:00  ch 6  dur 10800  watched 1267  frac 0.117315  week 17
+  2020-05-01 15:25:00  ch 6  dur 7500  watched 6057  frac 0.807600  week 18  (qualifying)
+  2020-05-01 18:00:00  ch 6  dur 3600  watched 3600  frac 1.000000  week 18  (qualifying)
+  2020-05-01 19:00:00  ch 6  dur 10800  watched 5527  frac 0.511759  week 18
+  2020-05-08 15:40:00  ch 6  dur 6600  watched 5784  frac 0.876364  week 19  (qualifying)
+  2020-05-15 14:50:00  ch 6  dur 9600  watched 5317  frac 0.553854  week 20
+  2020-05-15 19:00:00  ch 6  dur 10800  watched 6046  frac 0.559815  week 20
+softfrac = 0.999444 + 0.120093 + 0.636250 + 0.251111 + 0.921467 + 0.925833 + 0.337407 + 0.620533 + 0.109855 + 1.000000 + 0.117315 + 0.807600 + 1.000000 + 0.511759 + 0.876364 + 0.553854 + 0.559815 = 10.348701
+qualifying count = #rows with frac >= 0.8 = 7
+weeks_active (distinct ISO weeks with a qualifying watch) = [11, 14, 16, 18, 19] -> 5; share = 5 / 10 = 0.500000
+user's channels for this show C_us = [6]
+A_train_us = labelled airings of the show starting in the history window on C_us = 33 (all channels: 33)
+A_target_us = labelled airings in the target window on C_us = 8 (all channels: 8); schedule only
+exposure ratio = A_target_us / max(A_train_us, 1) = 8 / 33 = 0.242424; rate ratio = (8/10) / max(33/10, 1/10) = 0.242424
+vectorised: raw_softfrac=10.348701, raw_q=7.000000, raw_weeks_q=5.000000, raw_a_train=33.000000, raw_a_target=8.000000, raw_ex_ratio_us=0.242424
+[D2c] {'pairs': 857090, 'share_pairs_softfrac_changed': 0.12483169795470721, 'pairs_disappearing': 68156}
+[D3] inner features rebuilt identical: True
+[E/M1] fusion grids on inner (w in {0, 0.5, 1, 2}^5, k0 in {10, 30, 60})
+  best rrf: {'fusion': 'rrf', 'k0': 10.0, 'w_pf': 0.5, 'w_pfx': 2.0, 'w_ppr': 0.0, 'w_cbfpop': 0.5, 'w_pop': 0.0, 'inner_map5': 0.35802377807133423}
+  best zscore: {'fusion': 'zscore', 'k0': nan, 'w_pf': 0.0, 'w_pfx': 2.0, 'w_ppr': 0.0, 'w_cbfpop': 0.5, 'w_pop': 0.0, 'inner_map5': 0.35980889476001765}
+[E] model selection by 3-fold user-grouped CV on the inner task (never on val)
+   {'model': 'M2_logreg', 'C': 0.1, 'cv_map5_inner': 0.36441648481913474}
+   {'model': 'M2_logreg', 'C': 1.0, 'cv_map5_inner': 0.3648322394553218}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 7, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.36488384100528143, 'mean_best_iteration': 150.66666666666666}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 7, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.36944180941820104, 'mean_best_iteration': 265.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 7, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.3697323849473113, 'mean_best_iteration': 127.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 7, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.3693964630881976, 'mean_best_iteration': 113.33333333333333}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 15, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.37029791226884684, 'mean_best_iteration': 209.33333333333334}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 15, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.36819360083806957, 'mean_best_iteration': 192.66666666666666}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 15, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.3691228581335105, 'mean_best_iteration': 66.33333333333333}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 15, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.37006656199175025, 'mean_best_iteration': 69.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 31, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.36911138522645376, 'mean_best_iteration': 127.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 31, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.3683291063993434, 'mean_best_iteration': 140.66666666666666}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 31, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.3708963285440649, 'mean_best_iteration': 59.333333333333336}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+   {'model': 'M3_lambdarank', 'leaves': 31, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.369461063123471, 'mean_best_iteration': 39.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 7, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.37280919212217906, 'mean_best_iteration': 859.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 7, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.3730917871664028, 'mean_best_iteration': 839.6666666666666}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 7, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.37007401672815754, 'mean_best_iteration': 126.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 7, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.37162824722997584, 'mean_best_iteration': 268.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 15, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.3724535983329094, 'mean_best_iteration': 462.6666666666667}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 15, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.3728075618131494, 'mean_best_iteration': 388.6666666666667}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 15, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.36979148940983375, 'mean_best_iteration': 113.33333333333333}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 15, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.3724314764008753, 'mean_best_iteration': 94.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 31, 'lr': 0.03, 'mcs': 20, 'cv_map5_inner': 0.37337210047618985, 'mean_best_iteration': 226.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 31, 'lr': 0.03, 'mcs': 100, 'cv_map5_inner': 0.3725691247537604, 'mean_best_iteration': 228.0}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 31, 'lr': 0.1, 'mcs': 20, 'cv_map5_inner': 0.371960063642796, 'mean_best_iteration': 55.666666666666664}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+   {'model': 'M4_lgb_binary', 'leaves': 31, 'lr': 0.1, 'mcs': 100, 'cv_map5_inner': 0.37220779311455215, 'mean_best_iteration': 58.666666666666664}
+[E] selected hyper-parameters: {'M2_logreg': {'C': 1.0}, 'M3_lambdarank': {'leaves': 31, 'lr': 0.1, 'mcs': 20}, 'M4_lgb_binary': {'leaves': 31, 'lr': 0.03, 'mcs': 20}}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+        method  map5_ALL  ci_lo_ALL  ci_hi_ALL  map5_SUB  ci_lo_SUB  ci_hi_SUB  avg_all_sub
+    pop_recent    0.2398     0.2328     0.2466    0.2656     0.2528     0.2799       0.2527
+   PF_softfrac    0.3237     0.3168     0.3311    0.3600     0.3457     0.3738       0.3418
+           PPR    0.3256     0.3188     0.3331    0.3640     0.3502     0.3781       0.3448
+      cbf_pure    0.1815     0.1761     0.1873    0.1992     0.1896     0.2091       0.1904
+       cbf_pop    0.2783     0.2717     0.2849    0.3111     0.2997     0.3242       0.2947
+M0_PF_exposure    0.3406     0.3336     0.3482    0.3803     0.3660     0.3944       0.3604
+        M1_rrf    0.3411     0.3338     0.3483    0.3803     0.3660     0.3947       0.3607
+     M1_zscore    0.3416     0.3346     0.3490    0.3803     0.3662     0.3948       0.3609
+     M1_fusion    0.3416     0.3346     0.3490    0.3803     0.3662     0.3948       0.3609
+     M2_logreg    0.3421     0.3349     0.3497    0.3780     0.3643     0.3920       0.3601
+ M3_lambdarank    0.3482     0.3412     0.3556    0.3880     0.3743     0.4026       0.3681
+ M4_lgb_binary    0.3479     0.3406     0.3552    0.3881     0.3734     0.4027       0.3680
+        model             vs population  mean_diff   ci_lo  ci_hi
+    M1_fusion M0_PF_exposure        ALL     0.0010 -0.0007 0.0026
+    M1_fusion M0_PF_exposure        SUB     0.0000 -0.0031 0.0032
+    M1_fusion    PF_softfrac        ALL     0.0180  0.0155 0.0204
+    M1_fusion    PF_softfrac        SUB     0.0203  0.0152 0.0253
+    M2_logreg M0_PF_exposure        ALL     0.0015 -0.0014 0.0046
+    M2_logreg M0_PF_exposure        SUB    -0.0022 -0.0079 0.0035
+    M2_logreg    PF_softfrac        ALL     0.0185  0.0150 0.0218
+    M2_logreg    PF_softfrac        SUB     0.0180  0.0113 0.0241
+M3_lambdarank M0_PF_exposure        ALL     0.0075  0.0050 0.0099
+M3_lambdarank M0_PF_exposure        SUB     0.0078  0.0029 0.0128
+M3_lambdarank    PF_softfrac        ALL     0.0245  0.0213 0.0274
+M3_lambdarank    PF_softfrac        SUB     0.0280  0.0226 0.0334
+M4_lgb_binary M0_PF_exposure        ALL     0.0073  0.0045 0.0100
+M4_lgb_binary M0_PF_exposure        SUB     0.0078  0.0026 0.0132
+M4_lgb_binary    PF_softfrac        ALL     0.0243  0.0212 0.0272
+M4_lgb_binary    PF_softfrac        SUB     0.0281  0.0226 0.0339
+[E] best hybrid under P1: M3_lambdarank | final strategy by the rule: M3_lambdarank
+  [P2] {'model': 'M2_logreg', 'map5_ALL': 0.3481952026468156, 'ci_lo_ALL': 0.34078360215053766, 'ci_hi_ALL': 0.3558658395368072, 'map5_SUB': 0.38735362318840577, 'ci_lo_SUB': 0.37306985507246376, 'ci_hi_SUB': 0.4018639855072464}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+  [P2] {'model': 'M3_lambdarank', 'map5_ALL': 0.3533763440860215, 'ci_lo_ALL': 0.3458359181141439, 'ci_hi_ALL': 0.36078083126550864, 'map5_SUB': 0.39099710144927535, 'ci_lo_SUB': 0.37705695652173915, 'ci_hi_SUB': 0.4052271014492754}
+  [P2] {'model': 'M4_lgb_binary', 'map5_ALL': 0.3567320099255583, 'ci_lo_ALL': 0.34919203887510336, 'ci_hi_ALL': 0.36446441273779984, 'map5_SUB': 0.3954202898550725, 'ci_lo_SUB': 0.38097478260869566, 'ci_hi_SUB': 0.4107226086956522}
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+C:\Users\DELL\AppData\Roaming\Python\Python313\site-packages\lightgbm\sklearn.py:969: UserWarning: Found 'eval_at' in params. Will use it instead of 'eval_at' argument
+  _log_warning(f"Found '{alias}' in params. Will use it instead of 'eval_at' argument")
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\DELL\Downloads\RECSYS_MIDTERM\src\run_step6.py", line 532, in <module>
+    shuf = dict(zip(uu, [tv.truth[x] for x in rngp.permutation(uu)]))
+                         ~~~~~~~~^^^
+KeyError: np.float64(3.1933556604224507e+18)

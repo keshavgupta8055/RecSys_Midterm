@@ -1,0 +1,12 @@
+# raw competition data (Kaggle rules: download yourself) and derived caches
+data/
+cache/
+# Python
+__pycache__/
+*.pyc
+# designated final file is created by the student with src/designate_final.py
+submission/
+# credentials must never be committed
+kaggle.json
+.env
+# git cannot ignore by size: no tracked file may exceed 50 MB (checked in Step 7: largest tracked file < 5 MB)

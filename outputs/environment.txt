@@ -1,0 +1,11 @@
+python: 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)]
+os: Windows-11-10.0.26200-SP0
+cpu: Intel64 Family 6 Model 186 Stepping 3, GenuineIntel
+cpu_logical_cores: 8
+cpu_physical_cores: 6
+ram_total_gb: 7.69
+pandas: 2.3.1
+numpy: 2.3.2
+pyarrow: 21.0.0
+matplotlib: 3.10.5
+psutil: 7.0.0
